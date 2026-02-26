@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Login - MoodMeal</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-$END$
+    <header class="barra-superior"></header>
+
+    <main class="contenedor-login">
+
+        <!-- LADO IZQUIERDO -->
+        <section class="lado-izquierdo">
+            <h1>MOODMEAL</h1>
+        </section>
+
+        <!-- LADO DERECHO -->
+        <section class="lado-derecho">
+
+            <div class="form-container">
+
+                <!-- Icono usuario -->
+                <div class="icono-usuario">
+                    <img src="../assets/imagenes/icono_usuario.png" alt="Usuario">
+                </div>
+
+                <h2>Crear cuenta</h2>
+
+                <form>
+
+                    <div class="grupo-input">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Introduce tu usuario">
+                    </div>
+
+                    <div class="grupo-input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Introduce tu contraseña">
+                    </div>
+
+                    <button type="submit" class="btn-login">Login</button>
+
+                </form>
+
+                <div class="links-extra">
+                    <a href="#">¿No tienes cuenta? Regístrate</a>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 </body>
 </html>
