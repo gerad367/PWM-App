@@ -1,0 +1,38 @@
+/* GLOBAL: PARA TODAS LAS PAGINAS (EXCEPTO EL LOGIN)*/
+
+.barra-gris-superior{
+    background-color: #e7e7e7;
+    width: 100%;
+    height: 72px;
+    display: flex;                      /* Todos los elementos se ponen en fila*/
+    align-items: center;                /* Alinea los items por la altura de la barra (verticalmente)*/
+    justify-content: space-between;     /* Centrar todos los elementos (izq, centro, dcha) */
+
+    .zona-izquierda button {
+        width: 47.37px;
+        height: 47.37px;
+        background: none;
+        margin-left: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .zona-izquierda button img{
+        width: 100%;
+        height: auto;
+    }
+
+    .zona-pegada-izquierda{
+        margin-left: 20px;
+        margin-right: auto;
+    }
+}
+
+.barra-gris-inferior{
+    background-color: #e7e7e7;
+    width: 100%;
+    height: 72px;
+
+    position: fixed;
+    bottom: 0;
+}
