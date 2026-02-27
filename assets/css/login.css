@@ -1,0 +1,85 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Letra usada en toda la página*/
+    background-color: #f2f2f2;
+}
+
+/* Barra superior */
+.barra-superior {
+    height: 60px;
+    background-color: #cfcfcf;
+}
+
+/* Contenedor principal */
+.contenedor-login {
+    display: flex;  /* Para colocar los elementos en línea*/
+    height: calc(100vh - 60px); /* 100% de la pantalla - 60px (marco superior)*/
+}
+
+/* Lado izquierdo */
+.lado-izquierdo {
+    flex: 1;    /* Ocupa espacio que sobra */
+    background-color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Se usan juntas para estar en el medio(horizontal y vertical)*/
+}
+
+.lado-izquierdo h1 {
+    font-size: 30px;
+}
+
+/* Lado derecho */
+.lado-derecho {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja del formulario */
+.form-container {
+    width: 300px;
+    text-align: center;
+}
+
+/* Icono */
+.icono-usuario img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.grupo-input {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 8px; /* Espacio dentro del botón */
+    margin-top: 5px;
+}
+
+/* Botón */
+.boton-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #cfcfcf;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Links */
+.links-extra {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
