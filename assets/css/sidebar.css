@@ -1,0 +1,38 @@
+    .sidebar-lateral{
+        position: fixed;    /*se queda pegada a la pantalla*/
+        width: 240px;
+        height: 100%;
+        background-color: #ffffff;
+        border-right: 1px solid #d9d9d9;
+        display: flex;
+        flex-direction: column;
+        padding:20px;
+        z-index: 100;
+    }
+
+    /* Para centrar el contenido al poner la sidebar */
+    main {
+        margin-left: 240px;     /* El mismo ancho que la sidebar */
+        padding: 40px;
+    }
+
+    .menu-navegacion{
+        list-style: none;
+        margin-top: 70px;
+
+        li a img{
+            width: 25px;
+            height: 25px;
+
+        }
+
+        li a{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 15px;
+            color: #444;
+            text-decoration: none;
+            font-size: 25px;
+        }
+    }

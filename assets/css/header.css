@@ -1,0 +1,18 @@
+
+.barra-gris-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e7e7e7;
+    height: 72px;
+    display: flex;                      /* Todos los elementos se ponen en fila*/
+    align-items: center;                /* Alinea los items por la altura de la barra (verticalmente)*/
+    justify-content: space-between;     /* Centrar todos los elementos (izq, centro, dcha) */
+
+    .zona-pegada-izquierda{
+        margin-left: 20px;
+        margin-right: auto;
+    }
+}

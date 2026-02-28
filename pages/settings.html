@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <title>Settings - MoodMeal</title>
     <link rel="stylesheet" href="../assets/css/settings.css">
+
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+
 </head>
 <body>
-    <header class="barra-gris-superior">
-         <div class="zona-izquierda">
-              <button>
-                  <img src="../assets/imagenes/icono1.svg" alt="Desplegable menú">
-              </button>
-         </div>
+    <header id="header-template"></header>
 
-        <div class="zona-pegada-izquierda">
-          <h1>Título de la App</h1>
-        </div>
-    </header>
+    <aside id="sidebar-template"></aside>
 
     <main class="contenedor-settings">
         <div class="menu-ajustes">
@@ -110,7 +107,8 @@
 
     </main>
 
-    <footer class="barra-gris-inferior"></footer>
+    <footer id="footer-template"></footer>
+    <script src="../assets/js/templates.js"></script>
 
 </body>
 </html>

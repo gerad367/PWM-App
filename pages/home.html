@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/header.css">
+<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/sidebar.css">
+
 <link rel="stylesheet" href="../assets/css/home.css">
+
 <head>
     <meta charset="UTF-8">
     <title>Template Base - MoodMeal</title>
@@ -10,8 +14,9 @@
 <body>
 
     <header id="header-template"></header>
-    <script src="../assets/js/templates.js"></script>
-
+    <div class= "layout">
+        <aside id="sidebar-template"></aside>
+    </div>
     <main>
         <div class="seccion-entrada">
             <p class="pregunta-izquierda">¿Qué te <br> apetece hoy?</p>
@@ -68,6 +73,10 @@
             </div>
         </section>
     </main>
+
+    <footer id="footer-template"></footer>
+    <script src="../assets/js/templates.js"></script>
+
 </body>
 
 </html>
