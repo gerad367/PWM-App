@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Settings - MoodMeal</title>
+    <link rel="stylesheet" href="../assets/css/settings.css">
 </head>
 <body>
     <header class="barra-gris-superior">
@@ -15,25 +16,98 @@
         <div class="zona-pegada-izquierda">
           <h1>Título de la App</h1>
         </div>
-
-        <div class="zona-derecha">
-            <button>
-                <img src="../assets/imagenes/icono2_Profile.svg" alt="Profile">
-            </button>
-        </div>
     </header>
 
     <main class="contenedor-settings">
-      <div class="menu-ajustes">
-        <h2>Ajustes de la cuenta</h2>
+        <div class="menu-ajustes">
+            <h2>Ajustes de la cuenta</h2>
+            <a href="#perfil" class="opcion">Editar perfil</a>
+            <a href="#preferencias" class="opcion">Preferencias</a>
+            <a href="#notificaciones" class="opcion">Notificaciones</a>
+            <a href="#privacidad" class="opcion">Privacidad</a>
+            <a href="#" class="opcion eliminar">Eliminar cuenta</a>
+        </div>
 
-        <button class="opcion">Editar perfil</button>
-        <button class="opcion">Preferencias</button>
-        <button class="opcion">Notificaciones</button>
-        <button class="opcion">Privacidad</button>
-        <button class="opcion">Cerrar sesión</button>
-        <button class="opcion eliminar">Eliminar cuenta</button>
-      </div>
+        <div class="contenido-derecha">
+
+            <div id="perfil" class="seccion">
+                <h2>Editar perfil</h2>
+
+                <form class="form-perfil">
+
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Introduce tu nuevo nombre">
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Introduce tu nuevo email">
+
+                    <label>Nueva contraseña</label>
+                    <input type="password" placeholder="Introduce nueva contraseña">
+
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+
+                </form>
+            </div>
+
+            <div id="preferencias" class="seccion">
+                <h2>Preferencias</h2>
+                <form class="form-perfil">
+                    <label>Idioma</label>
+                    <select>
+                        <option>Español</option>
+                        <option>Inglés</option>
+                    </select>
+                    <label>Modo de la aplicación</label>
+                    <select>
+                        <option>Modo claro</option>
+                        <option>Modo oscuro</option>
+                    </select>
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+                </form>
+            </div>
+
+            <div id="notificaciones" class="seccion">
+                <h2>Notificaciones</h2>
+                <form class="form-perfil">
+                    <label>
+                        <input type="checkbox">
+                        Recibir notificaciones por email
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Recibir notificaciones push
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Recordatorios de pedidos
+                    </label>
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+
+                </form>
+            </div>
+
+            <div id="privacidad" class="seccion">
+                <h2>Privacidad</h2>
+                <form class="form-perfil">
+                    <label>Cuenta</label>
+                    <select>
+                        <option>Pública</option>
+                        <option>Privada</option>
+                    </select>
+                    <label>
+                        <input type="checkbox">
+                        Mostrar mi perfil en búsquedas
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Permitir mensajes de otros usuarios
+                    </label>
+                    <button type="submit" class="btn-guardar">Guardar cambios</button>
+                </form>
+            </div>
+
+        </div>
+
     </main>
 
     <footer class="barra-gris-inferior"></footer>
