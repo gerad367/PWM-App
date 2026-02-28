@@ -1,126 +1,126 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    font-family: Arial, sans-serif; /* Letra usada en toda la página*/
-    background-color: #f2f2f2;
-}
+    body {
+        font-family: Arial, sans-serif; /* Letra usada en toda la página*/
+        background-color: #f2f2f2;
+    }
 
-/* Barra superior */
-.barra-superior {
-    height: 60px;
-    background-color: #cfcfcf;
-}
+    /* Barra superior */
+    .barra-superior {
+        height: 60px;
+        background-color: #cfcfcf;
+    }
 
-/* Contenedor principal */
-.contenedor-login {
-    display: flex;  /* Para colocar los elementos en línea*/
-    height: calc(100vh - 60px); /* 100% de la pantalla - 60px (marco superior)*/
-}
+    /* Contenedor principal */
+    .contenedor-login {
+        display: flex;  /* Para colocar los elementos en línea*/
+        height: calc(100vh - 60px); /* 100% de la pantalla - 60px (marco superior)*/
+    }
 
-/* Lado izquierdo */
-.lado-izquierdo {
-    flex: 1;
-    position: relative;
-    background: url("../imagenes/fondo_comida.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
+    /* Lado izquierdo */
+    .lado-izquierdo {
+        flex: 1;
+        position: relative;
+        background: url("../imagenes/fondo_comida.jpg") center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
 
-/* Capa oscura encima de la imagen */
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
+    /* Capa oscura encima de la imagen */
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
 
-/* Contenido encima del overlay */
-.contenido-izquierda {
-    position: relative;
-    text-align: center;
-    z-index: 2;
-}
+    /* Contenido encima del overlay */
+    .contenido-izquierda {
+        position: relative;
+        text-align: center;
+        z-index: 2;
+    }
 
-.lado-izquierdo h1 {
-    font-size: 48px;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
-}
+    .lado-izquierdo h1 {
+        font-size: 48px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
 
-.lado-izquierdo p {
-    font-size: 18px;
-    opacity: 0.9;
-}
-/* Lado derecho */
-.lado-derecho {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .lado-izquierdo p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+    /* Lado derecho */
+    .lado-derecho {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* Caja del formulario */
-.form-container {
-    width: 320px;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    text-align: center;
-}
+    /* Caja del formulario */
+    .form-container {
+        width: 320px;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        text-align: center;
+    }
 
-/* Icono */
-.icono-usuario img {
-    width: 80px;
-    margin-bottom: 15px;
-}
+    /* Icono */
+    .icono-usuario img {
+        width: 80px;
+        margin-bottom: 15px;
+    }
 
-/* Inputs */
-.grupo-input {
-    margin-bottom: 15px;
-    text-align: left;
-}
+    /* Inputs */
+    .grupo-input {
+        margin-bottom: 15px;
+        text-align: left;
+    }
 
-.grupo-input input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    transition: 0.3s;
-}
+    .grupo-input input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
 
-.grupo-input input:focus {
-    border-color: #111;
-    outline: none;
-}
+    .grupo-input input:focus {
+        border-color: #111;
+        outline: none;
+    }
 
-/* Botón */
-.boton-login {
-    width: 100%;
-    padding: 12px;
-    background-color: #111;
-    color: white;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
+    /* Botón */
+    .boton-login {
+        width: 100%;
+        padding: 12px;
+        background-color: #111;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-.boton-login:hover {
-    background-color: #333;
-}
+    .boton-login:hover {
+        background-color: #333;
+    }
 
-/* Links */
-.links-extra {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-}
+    /* Links */
+    .links-extra {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }

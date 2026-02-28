@@ -1,141 +1,141 @@
-/* ------------------- */
-/* GENERAL */
-/* ------------------- */
+    /* ------------------- */
+    /* GENERAL */
+    /* ------------------- */
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
 
-/* ------------------- */
-/* LAYOUT */
-/* ------------------- */
+    /* ------------------- */
+    /* LAYOUT */
+    /* ------------------- */
 
-.contenedor-settings {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 120px);
-    transition: 0.3s ease;
-}
+    .contenedor-settings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 120px);
+        transition: 0.3s ease;
+    }
 
-/* Cuando hay sección activa */
-.contenedor-settings:has(.seccion:target) {
-    justify-content: center; /* centrado general */
-}
+    /* Cuando hay sección activa */
+    .contenedor-settings:has(.seccion:target) {
+        justify-content: center; /* centrado general */
+    }
 
-/* ------------------- */
-/* MENÚ */
-/* ------------------- */
+    /* ------------------- */
+    /* MENÚ */
+    /* ------------------- */
 
-.menu-ajustes {
-    background-color: #e0e0e0;
-    padding: 30px;
-    width: 300px;
-    text-align: center;
-    transition: 0.3s ease;
-}
+    .menu-ajustes {
+        background-color: #e0e0e0;
+        padding: 30px;
+        width: 300px;
+        text-align: center;
+        transition: 0.3s ease;
+    }
 
-/* Cuando se activa algo */
-.contenedor-settings:has(.seccion:target) .menu-ajustes {
-    width: 220px;
-    margin-right: 60px; /* separación del contenido */
-}
+    /* Cuando se activa algo */
+    .contenedor-settings:has(.seccion:target) .menu-ajustes {
+        width: 220px;
+        margin-right: 60px; /* separación del contenido */
+    }
 
-/* Botones */
-.opcion {
-    display: block;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #bdbdbd;
-    text-decoration: none;
-    color: black;
-    transition: 0.2s ease;
-}
+    /* Botones */
+    .opcion {
+        display: block;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #bdbdbd;
+        text-decoration: none;
+        color: black;
+        transition: 0.2s ease;
+    }
 
-.opcion:hover {
-    background-color: #aaaaaa;
-}
+    .opcion:hover {
+        background-color: #aaaaaa;
+    }
 
-/* Botón rojo */
-.eliminar {
-    background-color: #d9534f;
-    color: white;
-}
+    /* Botón rojo */
+    .eliminar {
+        background-color: #d9534f;
+        color: white;
+    }
 
-/* ------------------- */
-/* CONTENIDO DERECHO */
-/* ------------------- */
+    /* ------------------- */
+    /* CONTENIDO DERECHO */
+    /* ------------------- */
 
-.contenido-derecha {
-    display: none;
-    width: 400px;  /* ancho fijo más controlado */
-    padding: 30px;
-}
+    .contenido-derecha {
+        display: none;
+        width: 400px;  /* ancho fijo más controlado */
+        padding: 30px;
+    }
 
-/* Mostrar cuando hay sección activa */
-.contenedor-settings:has(.seccion:target) .contenido-derecha {
-    display: block;
-}
+    /* Mostrar cuando hay sección activa */
+    .contenedor-settings:has(.seccion:target) .contenido-derecha {
+        display: block;
+    }
 
-.seccion {
-    display: none;
-}
+    .seccion {
+        display: none;
+    }
 
-.seccion:target {
-    display: block;
-}
+    .seccion:target {
+        display: block;
+    }
 
-/* ------------------- */
-/* FORMULARIO PERFIL */
-/* ------------------- */
+    /* ------------------- */
+    /* FORMULARIO PERFIL */
+    /* ------------------- */
 
-.form-perfil {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-}
+    .form-perfil {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
 
-.form-perfil select {
-    padding: 8px;
-    border: 1px solid #ccc;
-}
+    .form-perfil select {
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
 
-.form-perfil label {
-    font-weight: bold;
-    margin-top: 10px;
-}
+    .form-perfil label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
 
-.form-perfil input {
-    padding: 8px;
-    border: 1px solid #ccc;
-}
+    .form-perfil input {
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
 
-.btn-guardar {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #999999;
-    border: none;
-    cursor: pointer;
-}
+    .btn-guardar {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #999999;
+        border: none;
+        cursor: pointer;
+    }
 
-/* BOTÓN ACTIVO */
+    /* BOTÓN ACTIVO */
 
-.contenedor-settings:has(#perfil:target)
-.menu-ajustes a[href="#perfil"],
+    .contenedor-settings:has(#perfil:target)
+    .menu-ajustes a[href="#perfil"],
 
-.contenedor-settings:has(#preferencias:target)
-.menu-ajustes a[href="#preferencias"],
+    .contenedor-settings:has(#preferencias:target)
+    .menu-ajustes a[href="#preferencias"],
 
-.contenedor-settings:has(#notificaciones:target)
-.menu-ajustes a[href="#notificaciones"],
+    .contenedor-settings:has(#notificaciones:target)
+    .menu-ajustes a[href="#notificaciones"],
 
-.contenedor-settings:has(#privacidad:target)
-.menu-ajustes a[href="#privacidad"] {
+    .contenedor-settings:has(#privacidad:target)
+    .menu-ajustes a[href="#privacidad"] {
 
-    background-color: #666;
-    color: white;
-    font-weight: bold;
-}
+        background-color: #666;
+        color: white;
+        font-weight: bold;
+    }
