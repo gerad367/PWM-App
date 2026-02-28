@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    height: 80vh;
+    align-content: center;
+    justify-content: center;
+}
+
+#restaurant-main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin: 72px 0 72px 0;
+    padding: 20px;
+}
+
+#portada {
+    margin-right: 20px;
+}
+
+#extra {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    
+    #rating {
+        flex-grow: 2;
+    }
+    
+    img {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+#detalles {
+    position: relative;
+    width: fit-content;
+    overflow-x: hidden;
+    
+    h2 {
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+#restaurant-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    /*margin-top: 44px;*/
+    padding: 15px;
+    max-width: 100%;
+}
+
+.menu-element img {
+    width: 200px;
+    height: 200px;
+}
+
+.menu-element p {
+    padding: 0 10px 0 10px;
+    text-align: center;
+}
+
+#horario {
+    margin-top: 120px;
+    justify-content: center;
+    
+    table {
+        margin: auto;
+        padding: 5px;
+        
+        td{
+            padding: 0 10px 0 10px;
+        }
+    }
+}
