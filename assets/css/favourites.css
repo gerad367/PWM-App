@@ -3,12 +3,13 @@
 /* ============================= */
 
 .zona-superior-favoritos {
-    margin-top: 100px;
-    margin-left: 280px; /* AJUSTA al ancho de tu sidebar */
-    margin-right: 40px;
+    padding-top: 120px;
+    margin-left: 280px;
+    width: calc(100% - 240px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 /* Quitamos margen viejo del título */
@@ -22,6 +23,7 @@
     display: flex;
     gap: 15px;
     align-items: center;
+    margin-right: 100px;
 }
 
 /* Select ordenar */
@@ -52,11 +54,3 @@
 .btn-vaciar:hover {
     background: #333;
 }
-
-#cards_content-template {
-    margin-top: 40px;
-    margin-left: 240px; /* Empujamos el contenedor principal para que esquive el sidebar */
-    width: calc(100% - 240px); /* Ajustamos el ancho exacto */
-    box-sizing: border-box;
-}
-
