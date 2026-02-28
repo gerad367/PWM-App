@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="../assets/css/layout.css">
-<link rel="stylesheet" href="../assets/css/mood.css">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mood-Desktop</title>
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/mood.css">
 </head>
+
+
 <body>
-
-    <header class="barra-gris-superior">
-        <div class="zona-izquierda">
-            <button>
-                <img src="../assets/images/icono1.svg" alt="Desplegable menú">
-            </button>
-        </div>
-
-        <div class="zona-pegada-izquierda">
-            <h1>MoodMeal</h1>
-        </div>
-
-    </header>
+    <header id="header-template"></header>
 
     <main>
+
         <div class="seccion-mood">
             <div class="linea-horizontal"></div>
 
@@ -68,18 +59,20 @@
                 </button>
                 <h3>McDonald's</h3>
             </article>
-        </section>
 
-        <article class="tarjeta2-restaurante">
-            <img src="../assets/images/restaurants_pictures/mcdonalds.png" class="foto-restaurante" alt="Restaurante 1">
-            <button class="btn-favorito">
-                <img src="../assets/images/favorito2.svg" alt="like">
-            </button>
-            <h3>McDonald's</h3>
-        </article>
+            <article class="tarjeta2-restaurante">
+                <img src="../assets/images/restaurants_pictures/mcdonalds.png" class="foto-restaurante" alt="Restaurante 1">
+                <button class="btn-favorito">
+                    <img src="../assets/images/favorito2.svg" alt="like">
+                </button>
+                <h3>McDonald's</h3>
+            </article>
+
+        </section>
 
     </main>
 
-    <footer class="barra-gris-inferior"></footer>
+    <script src="../assets/js/templates.js"></script>
+
 </body>
 </html>
