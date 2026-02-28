@@ -17,30 +17,12 @@ body {
 
 #content {
     margin-top: 20px;
-    /*height: 100%;*/
-    /*width: 100%;*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
-    /*gap: 15px;*/
-    /*align-content: flex-start;*/
-    /*align-items: flex-start;*/
-    /*justify-content: space-evenly;*/
-    /*overflow: hidden;*/
-    /*margin: 72px 0 72px 0;*/
-    /*display: grid;*/
-    /*grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));*/
-    /*grid-gap: 2rem;*/
-    /*display: flex;*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container-items {
-    /*display: grid;*/
-    /*grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));*/
-    /*grid-gap: 2rem;*/
     display: flex;
     width: fit-content;
     justify-content: stretch;
@@ -48,37 +30,122 @@ body {
     flex-flow: row wrap;
     margin: auto;
     gap: 4rem;
-    
+
 }
 
-.favourite-item {
-    
-    margin: 0 30px 0 30px;
-    height: 350px;
-    width:  350px;
-    
-    img {
-        width: 350px; 
+
+.recomendaciones-segun-mood {
+    background-color: #f5f5f5;
+    box-sizing: border-box; /* Obliga al padding a quedarse por dentro del 100% */
+    width: 100%;
+    height: auto;
+
+    border: none;
+    border-top: 1px solid #ccc;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
+
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 90px;
+    padding: 40px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.tarjeta2-restaurante {
+    position: relative;
+    width: 320px;
+    background: white;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;      /* Para que al pasar el raton se muevan*/
+
+    .foto-restaurante{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;      /* Para que las imagenes no se vean aplastadas */
+        border-radius: 8px;
     }
-    
-    .like-button {
-        position: relative;
-        left: 300px;
-        bottom: 355px;
-        width: 50px;
-        height: 50px;
-        background: none;
+
+    .btn-favorito{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background:white;
         border: none;
-        
-        img {
-            width: 30px;
-            height: 30px;
-            padding: 5px;  
-        }
-        
-        :hover {
-            background-color: rgba(0, 0, 0, 0.29);
-            border-radius: 25%;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+
+        img{
+            width: 20px;        /* Tamaño del corazón */
         }
     }
+
+}
+
+/* Efecto para que la web parezca viva */
+.tarjeta2-restaurante:hover {
+    transform: translateY(-5px);
+}
+
+/* ============================= */
+/* ZONA SUPERIOR FAVORITOS */
+/* ============================= */
+
+.zona-superior-favoritos {
+    margin-top: 100px;
+    margin-left: 250px; /* AJUSTA al ancho de tu sidebar */
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Quitamos margen viejo del título */
+#title {
+    margin: 0;
+    font-size: 60px;
+}
+
+/* Acciones derecha */
+.acciones-favoritos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Select ordenar */
+.select-ordenar {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.select-ordenar:hover {
+    border-color: #999;
+}
+
+/* Botón vaciar mejorado */
+.btn-vaciar {
+    padding: 8px 14px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-vaciar:hover {
+    background: #333;
 }
