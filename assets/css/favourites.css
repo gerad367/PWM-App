@@ -1,21 +1,20 @@
-#title {
-    margin: 0; /* Lo reseteamos porque la caja padre ya nos ha bajado 100px */
-    text-align: center;
-    font-size: 60px;
-}
 /* ============================= */
 /* ZONA SUPERIOR FAVORITOS */
 /* ============================= */
 
 .zona-superior-favoritos {
-    margin-left: 250px; /* AJUSTA al ancho de tu sidebar */
+    margin-top: 100px;
+    margin-left: 280px; /* AJUSTA al ancho de tu sidebar */
     margin-right: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* El truco para moverlo hacia abajo sin romper la página */
-    position: relative;
-    top: 100px;
+}
+
+/* Quitamos margen viejo del título */
+#title {
+    margin: 0;
+    font-size: 60px;
 }
 
 /* Acciones derecha */
@@ -53,41 +52,11 @@
 .btn-vaciar:hover {
     background: #333;
 }
-#content {
-    margin-left: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+
+#cards_content-template {
+    margin-top: 40px;
+    margin-left: 240px; /* Empujamos el contenedor principal para que esquive el sidebar */
+    width: calc(100% - 240px); /* Ajustamos el ancho exacto */
+    box-sizing: border-box;
 }
 
-.container-items {
-    display: flex;
-    width: fit-content;
-    justify-content: stretch;
-    flex: 1 1 auto;
-    flex-flow: row wrap;
-    margin: auto;
-    gap: 4rem;
-}
-
-.favourite-item .like-button {
-    position: relative;
-    left: 300px;
-    bottom: 355px;
-    width: 50px;
-    height: 50px;
-    background: none;
-    border: none;
-}
-
-.favourite-item .like-button img {
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-}
-
-.favourite-item .like-button:hover {
-    background-color: rgba(0, 0, 0, 0.29);
-    border-radius: 25%;
-}
