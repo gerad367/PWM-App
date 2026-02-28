@@ -1,108 +1,10 @@
-<<<<<<< HEAD
-body {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-#title {
-    margin-top: 100px;
-    text-align: center;
-    font-size: 60px;
-}
-
-#content {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-items {
-    display: flex;
-    width: fit-content;
-    justify-content: stretch;
-    flex: 1 1 auto;
-    flex-flow: row wrap;
-    margin: auto;
-    gap: 4rem;
-
-}
-
-
-.recomendaciones-segun-mood {
-    background-color: #f5f5f5;
-    box-sizing: border-box; /* Obliga al padding a quedarse por dentro del 100% */
-    width: 100%;
-    height: auto;
-
-    border: none;
-    border-top: 1px solid #ccc;
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
-
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    gap: 90px;
-    padding: 40px;
-    justify-content: center;
-    margin-top: 60px;
-}
-
-.tarjeta2-restaurante {
-    position: relative;
-    width: 320px;
-    background: white;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;      /* Para que al pasar el raton se muevan*/
-
-    .foto-restaurante{
-        width: 100%;
-        height: 150px;
-        object-fit: cover;      /* Para que las imagenes no se vean aplastadas */
-        border-radius: 8px;
-    }
-
-    .btn-favorito{
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background:white;
-        border: none;
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        cursor: pointer;
-
-        img{
-            width: 20px;        /* Tamaño del corazón */
-        }
-    }
-
-}
-
-/* Efecto para que la web parezca viva */
-.tarjeta2-restaurante:hover {
-    transform: translateY(-5px);
-}
-
 /* ============================= */
 /* ZONA SUPERIOR FAVORITOS */
 /* ============================= */
 
 .zona-superior-favoritos {
     margin-top: 100px;
-    margin-left: 250px; /* AJUSTA al ancho de tu sidebar */
+    margin-left: 280px; /* AJUSTA al ancho de tu sidebar */
     margin-right: 40px;
     display: flex;
     justify-content: space-between;
@@ -150,89 +52,11 @@ body {
 .btn-vaciar:hover {
     background: #333;
 }
-=======
-    body {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        align-content: center;
-        justify-content: center;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
-    }
 
-    #title {
-        margin-top: 100px;
-        text-align: center;
-        font-size: 60px;
-    }
+#cards_content-template {
+    margin-top: 40px;
+    margin-left: 240px; /* Empujamos el contenedor principal para que esquive el sidebar */
+    width: calc(100% - 240px); /* Ajustamos el ancho exacto */
+    box-sizing: border-box;
+}
 
-    #content {
-        margin-top: 20px;
-        /*height: 100%;*/
-        /*width: 100%;*/
-        /*display: flex;*/
-        /*flex-direction: row;*/
-        /*flex-wrap: wrap;*/
-        /*gap: 15px;*/
-        /*align-content: flex-start;*/
-        /*align-items: flex-start;*/
-        /*justify-content: space-evenly;*/
-        /*overflow: hidden;*/
-        /*margin: 72px 0 72px 0;*/
-        /*display: grid;*/
-        /*grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));*/
-        /*grid-gap: 2rem;*/
-        /*display: flex;*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container-items {
-        /*display: grid;*/
-        /*grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));*/
-        /*grid-gap: 2rem;*/
-        display: flex;
-        width: fit-content;
-        justify-content: stretch;
-        flex: 1 1 auto;
-        flex-flow: row wrap;
-        margin: auto;
-        gap: 4rem;
-
-    }
-
-    .favourite-item {
-
-        margin: 0 30px 0 30px;
-        height: 350px;
-        width:  350px;
-
-        img {
-            width: 350px;
-        }
-
-        .like-button {
-            position: relative;
-            left: 300px;
-            bottom: 355px;
-            width: 50px;
-            height: 50px;
-            background: none;
-            border: none;
-
-            img {
-                width: 30px;
-                height: 30px;
-                padding: 5px;
-            }
-
-            :hover {
-                background-color: rgba(0, 0, 0, 0.29);
-                border-radius: 25%;
-            }
-        }
-    }
->>>>>>> 56bf84047a9bed550d361dcc69386cb0a5a29fab
