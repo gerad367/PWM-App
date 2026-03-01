@@ -26,7 +26,7 @@
     .lado-izquierdo {
         flex: 1;
         position: relative;
-        background: url("../imagenes/fondo_comida.jpg") center/cover no-repeat;
+        background: url("../images/foto_portada.png") center/cover no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -47,7 +47,6 @@
         text-align: center;
         z-index: 2;
     }
-
     .lado-izquierdo h1 {
         font-size: 48px;
         letter-spacing: 4px;
