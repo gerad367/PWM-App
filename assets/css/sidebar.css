@@ -1,5 +1,6 @@
     .sidebar-lateral{
         position: fixed;    /*se queda pegada a la pantalla*/
+        top: 0;
         width: 240px;
         height: 100%;
         background-color: #ffffff;
