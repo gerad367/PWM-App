@@ -122,17 +122,13 @@
 
     /* BOTÓN ACTIVO */
 
-    .contenedor-settings:has(#perfil:target),
-    .menu-ajustes a[href="#perfil"],
+    .contenedor-settings:has(#perfil:target) .menu-ajustes a[href="#perfil"],
 
-    .contenedor-settings:has(#preferencias:target),
-    .menu-ajustes a[href="#preferencias"],
+    .contenedor-settings:has(#preferencias:target) .menu-ajustes a[href="#preferencias"],
 
-    .contenedor-settings:has(#notificaciones:target),
-    .menu-ajustes a[href="#notificaciones"],
+    .contenedor-settings:has(#notificaciones:target) .menu-ajustes a[href="#notificaciones"],
 
-    .contenedor-settings:has(#privacidad:target),
-    .menu-ajustes a[href="#privacidad"] {
+    .contenedor-settings:has(#privacidad:target) .menu-ajustes a[href="#privacidad"] {
 
         background-color: #666;
         color: white;
