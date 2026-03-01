@@ -14,7 +14,7 @@
 
 /* Quitamos margen viejo del título */
 #title {
-    margin: 0;
+    margin: 0 0 0 50px;
     font-size: 60px;
 }
 

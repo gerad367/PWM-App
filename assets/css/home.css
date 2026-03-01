@@ -2,7 +2,7 @@
     /* Ya se inyectó el header y footer en el home*/
 
     .seccion-entrada{
-        margin: 0px auto 0 200px;
+        margin: 0 auto 0 200px;
         display: flex;
         gap: 1400px;
         width: fit-content;
@@ -87,6 +87,12 @@
             border: none;
             border-radius: 50%;
             cursor: pointer;
+            background: none;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
         }
     }
 

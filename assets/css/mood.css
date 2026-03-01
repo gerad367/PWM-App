@@ -1,5 +1,5 @@
 
-.logo_romantico {
+#mood-title {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -45,7 +45,7 @@
     }
 
 
-.logo_romantico img{
+#mood-title img{
     width: 120px;
     height: auto;
     border-radius: 20px;
