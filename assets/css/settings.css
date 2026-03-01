@@ -3,7 +3,6 @@
     /* ------------------- */
 
     body {
-        margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
     }
@@ -123,16 +122,16 @@
 
     /* BOTÓN ACTIVO */
 
-    .contenedor-settings:has(#perfil:target)
+    .contenedor-settings:has(#perfil:target),
     .menu-ajustes a[href="#perfil"],
 
-    .contenedor-settings:has(#preferencias:target)
+    .contenedor-settings:has(#preferencias:target),
     .menu-ajustes a[href="#preferencias"],
 
-    .contenedor-settings:has(#notificaciones:target)
+    .contenedor-settings:has(#notificaciones:target),
     .menu-ajustes a[href="#notificaciones"],
 
-    .contenedor-settings:has(#privacidad:target)
+    .contenedor-settings:has(#privacidad:target),
     .menu-ajustes a[href="#privacidad"] {
 
         background-color: #666;
