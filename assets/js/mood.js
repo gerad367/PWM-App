@@ -21,7 +21,7 @@ if (mood === "romantico") {
     textos[1].innerHTML = "Celebra tu alegría";
     textos[2].innerHTML = "Lugares vibrantes y llenos de energía positiva";
 } else if (mood === "energetico") {
-    imagen.src = "../assets/images/emoji_energetico.png";
+    imagen.src = "../assets/images/emoji_energetico1.png";
     textos[0].innerHTML = "Energético";
     textos[1].innerHTML = "Potencia máxima";
     textos[2].innerHTML = "Sabores intensos que despiertan todos tus sentidos";
