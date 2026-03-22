@@ -1,11 +1,55 @@
+/* Para importar tipografias de internet */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap');
 
+
+/* Dado que el header es el unico CSS que se carga en todas las paginas, aplicamos variables globales a todas: */
+/* El root está por encima del html. Esto esta disponible para todos los css */
+
+:root {
+    /* nota: -- son las variables en css (ponemos cualquier nombre)*/
+    /* Colores */
+    --color-primary: #E8541A;
+    --color-primary-hover: #FF7040;
+    --color-primary-pale:  #FFE8DA;
+    --color-bg:            #FFF7F2;
+    --color-bg-card:       #FFFFFF;
+    --color-bg-section:    #F5EDE8;
+    --color-text-dark:     #1E0E05;
+    --color-text-body:     #4A2E1E;
+    --color-text-muted:    #9A7060;
+    --color-border:        #E5D4CA;
+    --color-danger:        #D9534F;
+
+    /* Tipografía */
+    --font-title: 'Syne', sans-serif;
+    --font-body:  'DM Sans', sans-serif;
+
+    /* Radios */
+    --radius-card: 16px;
+    --radius-btn:  18px;
+    --radius-sm:   8px;
+
+    /* Sombras */
+    --shadow-card: 0 2px 12px rgba(60, 20, 5, 0.08);
+    --shadow-hover: 0 6px 24px rgba(60, 20, 5, 0.14);
+}
+
+body {
+    /* El var es para usar una variable que hemos definido */
+    font-family: var(--font-body), serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-body);
+    min-height: 100vh;
+}
+
+/* HEADER */
     .barra-gris-superior {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         z-index: 1000;
-        background-color: #e7e7e7;
+        background-color: var(--color-bg-card);
         height: 72px;
         display: flex;                      /* Todos los elementos se ponen en fila*/
         align-items: center;                /* Alinea los items por la altura de la barra (verticalmente)*/

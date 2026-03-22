@@ -4,11 +4,17 @@
     .seccion-entrada{
         margin: 0 auto 0 200px;
         display: flex;
-        gap: 1400px;
         width: fit-content;
         align-items: center;
+        justify-content: space-between; /* El gap hacia que se rompiera el zoom */
+
 
         img{
+            position: absolute;
+
+            top: 40px;
+            right: 60px;
+
             margin-top: 80px;
             width: 150px;
             height: 150px;
@@ -16,12 +22,16 @@
     }
 
     .pregunta-izquierda {
+        font-family: var(--font-title), serif;
         text-align: left;
         font-size:70px;
         font-weight: 600;
         margin-bottom: 10px;
-        color: #333;
 
+        line-height: 1.0;
+        letter-spacing: -3px;
+        color: var(--color-text-dark);
+        max-width: 600px;         /* evita que choque con la imagen */
 
     }
 
@@ -36,36 +46,58 @@
 
     .Buscador {
         display: flex;                                          /* Obliga al input y a la imagen a estar en la fila */
-        width: 650px;
-        height: 58px;
+        width: min(650px, 90%);                                 /* min elige el valor mas pequeño de los dos. El 90% es el ancho del conedor del padre */
+        height: 54px;
 
         /* Margen: Arriba, automatico a los lados, abajo*/
-        margin: 60px auto 70px;                                 /* auto a los lados para centrarlo: el navegador calcula
+        margin: 50px auto 60px;                                 /* auto a los lados para centrarlo: el navegador calcula
                                                                    cuanto espacio sobra en la pantalla y lo divide en 2 */
-        border: #d9d9d9 1px solid;
-        border-radius: 18px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-btn);
         overflow: hidden;                                       /* Corta lo que sobresalga */
+
+        background: var(--color-bg-card);
+        box-shadow: var(--shadow-card);
+
+        /* .Buscador:focus- within: describe un estado (cuando el usuario ha hecho clic dentro del buscador) */
+        /* Si fuera solo :focus se pondria en el input directamente pero como el buscador es un div q contiene le input y el button...*/
+        &:focus-within{
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 1px var(--color-primary-pale)
+        }
 
         input{
             flex: 1;                                            /* Coge por completo el espacio que sobre*/
             border: none;
             outline: none;
+            font-family: var(--font-body), serif;
             font-size: 16px;
+            color: var(--color-text-body);
+            background: transparent;
             padding-left: 20px;
+
+            /* placeholder es el texto q aparece dentro del buscador */
+            &::placeholder{
+                color: var(--color-text-muted);
+            }
         }
 
         button{
-            width: 50px;
+            width: 54px;
             height: 100%;
-            background: #f9f9f9;
+            background:var(--color-bg);
             border: none;
-            border-left: #d9d9d9 1px solid;
+            border-left: 1px solid var(--color-border);
             cursor: pointer;
 
             /* Para centrar la lupa dentro del botón */
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover{
+                background: var(--color-primary-pale);
+            }
 
             img{
                 width: 24px;
@@ -74,6 +106,20 @@
             }
         }
     }
+
+    .seccion-mood{
+        text-align: center;
+
+        .pregunta-centro{
+            font-family: var(--font-body), serif;
+            font-size: 12px;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+    }
+
 
     .contenedor-moods{
         display: flex;
@@ -90,56 +136,90 @@
             background: none;
 
             img {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
+            }
+
+            &:hover{
+                transform: scale(1.12) translateY(-4px);
             }
         }
     }
 
     .contenedor-recomendaciones-restaurantes{
-        background-color: #f5f5f5;
+        background-color:var(--color-bg-section);
         width: 100%;
         height: auto;
         margin-bottom: 90px;
         border: none;
-        border-top: 1px solid #ccc;
+        border-top: 1px solid var(--color-border);
         box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
         /* display: flex; ERROR. solo da órdenes a hijos directos (en este caso h2)*/
 
         h2{
+            font-family: var(--font-title), serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--color-text-dark);
             text-align: center;
-            margin: 20px;
+            padding:36px 0 24px;
+            letter-spacing: -0.5px;
         }
 
         .grid-restaurantes{
             display: flex;
             justify-content: center;
-            gap: 70px;
+            gap: 80px;
             padding: 10px 10px 80px;
+            flex-wrap: wrap;
 
             .tarjeta-restaurante{
                 width: 300px;
-                background: white;
+                background: var(--color-bg-card);
                 padding: 10px;
                 border-radius: 12px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                border: 1px solid var(--color-border);
+                overflow: hidden;
+                box-shadow: var(--shadow-card);
+                transition: transform 0.25s, box-shadow 0.25s;
+
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: var(--shadow-hover);
+                }
+
+                a{
+                    text-decoration: none;
+                    color:inherit;
+                }
 
                 img{
                     width: 100%;
-                    height: 100%;
+                    height: 160px;
                     object-fit: cover;      /* Para que las imagenes no se vean aplastadas */
 
                 }
 
                 h3{
+                    font-family: var(--font-title), serif;
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: var(--color-primary);
                     text-align: center;
                     margin:10px 0 5px;
+                    text-decoration-color: transparent;
+                    transition: text-decoration-color 0.2s;
+
+                    &:hover{
+                        text-decoration-color: var(--color-primary);
+                    }
                 }
 
                 p{
                     text-align: center;
                     font-size: 14px;
-                    color: gray;
+                    color: var(--color-text-muted);
+                    padding-bottom:14px;
                 }
             }
         }
