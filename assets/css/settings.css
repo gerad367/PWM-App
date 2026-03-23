@@ -1,22 +1,11 @@
-    /* ------------------- */
-    /* GENERAL */
-    /* ------------------- */
-
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-    }
-
-    /* ------------------- */
-    /* LAYOUT */
-    /* ------------------- */
 
     .contenedor-settings {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 120px);
-        transition: 0.3s ease;
+        min-height: calc(100vh - 128px);
+        padding: 48px 60px 80px;
+        gap:32px;
     }
 
     /* Cuando hay sección activa */
@@ -29,38 +18,48 @@
     /* ------------------- */
 
     .menu-ajustes {
-        background-color: #e0e0e0;
-        padding: 30px;
-        width: 300px;
-        text-align: center;
-        transition: 0.3s ease;
+        background-color: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-card);
+        padding: 28px 20px;
+        width: 240px;
     }
-
-    /* Cuando se activa algo */
-    .contenedor-settings:has(.seccion:target) .menu-ajustes {
-        width: 220px;
-        margin-right: 60px; /* separación del contenido */
-    }
+    
 
     /* Botones */
     .opcion {
         display: block;
-        padding: 10px;
-        margin-top: 10px;
-        background-color: #bdbdbd;
+        padding: 10px 14px;
+        margin-top: 6px;
+        background-color: var(--color-bg);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
         text-decoration: none;
-        color: black;
-        transition: 0.2s ease;
+        font-family: var(--font-body), serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--color-text-body);
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
     }
 
     .opcion:hover {
-        background-color: #aaaaaa;
+        background-color: var(--color-primary-pale);
+        color: var(--color-primary);
+        border-color: var(--color-primary);
     }
 
     /* Botón rojo */
     .eliminar {
-        background-color: #d9534f;
+        background-color: #FFF0F0;
+        border-color: #F5C6C6;
+        color: var(--color-danger);
+        margin-top: 16px;
+    }
+
+    .eliminar:hover {
+        background-color: var(--color-danger);
         color: white;
+        border-color: var(--color-danger);
     }
 
     /* ------------------- */
@@ -68,69 +67,112 @@
     /* ------------------- */
 
     .contenido-derecha {
-        display: none;
+        display: block;
         width: 400px;  /* ancho fijo más controlado */
-        padding: 30px;
+        background: var(--color-bg-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-card);
+        padding: 32px 28px;
     }
 
-    /* Mostrar cuando hay sección activa */
-    .contenedor-settings:has(.seccion:target) .contenido-derecha {
-        display: block;
-    }
 
-    .seccion {
+    /* ---- Secciones ---- */
+    #perfil { display: block; }
+
+    .contenedor-settings:has(#preferencias:target) #perfil,
+    .contenedor-settings:has(#notificaciones:target) #perfil,
+    .contenedor-settings:has(#privacidad:target) #perfil {
         display: none;
     }
 
-    .seccion:target {
-        display: block;
+    .seccion { display: none; }
+    .seccion:target { display: block; }
+
+    /* ---- Botón activo ---- */
+    .contenedor-settings:has(#perfil:target)         .menu-ajustes a[href="#perfil"],
+    .contenedor-settings:has(#preferencias:target)   .menu-ajustes a[href="#preferencias"],
+    .contenedor-settings:has(#notificaciones:target) .menu-ajustes a[href="#notificaciones"],
+    .contenedor-settings:has(#privacidad:target)     .menu-ajustes a[href="#privacidad"] {
+        background-color: var(--color-primary-pale);
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        font-weight: 600;
     }
 
-    /* ------------------- */
-    /* FORMULARIO PERFIL */
-    /* ------------------- */
+    /* ---- Formulario ---- */
+    .seccion h2 {
+        font-family: var(--font-title), serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--color-text-dark);
+        letter-spacing: -0.5px;
+        margin-bottom: 4px;
+    }
 
     .form-perfil {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
         margin-top: 20px;
     }
 
-    .form-perfil select {
-        padding: 8px;
-        border: 1px solid #ccc;
-    }
-
     .form-perfil label {
-        font-weight: bold;
-        margin-top: 10px;
+        font-family: var(--font-body), serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--color-text-body);
+        margin-top: 8px;
     }
 
-    .form-perfil input {
-        padding: 8px;
-        border: 1px solid #ccc;
+    .form-perfil input,
+    .form-perfil select {
+        padding: 10px 12px;
+        font-family: var(--font-body), serif;
+        font-size: 14px;
+        border: 1.5px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-bg);
+        color: var(--color-text-body);
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .btn-guardar {
-        margin-top: 15px;
-        padding: 10px;
-        background-color: #999999;
-        border: none;
+    .form-perfil input:focus,
+    .form-perfil select:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px var(--color-primary-pale);
+    }
+
+    .form-perfil label:has(input[type="checkbox"]) {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
         cursor: pointer;
     }
 
-    /* BOTÓN ACTIVO */
+    .form-perfil input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        accent-color: var(--color-primary);
+    }
 
-    .contenedor-settings:has(#perfil:target) .menu-ajustes a[href="#perfil"],
-
-    .contenedor-settings:has(#preferencias:target) .menu-ajustes a[href="#preferencias"],
-
-    .contenedor-settings:has(#notificaciones:target) .menu-ajustes a[href="#notificaciones"],
-
-    .contenedor-settings:has(#privacidad:target) .menu-ajustes a[href="#privacidad"] {
-
-        background-color: #666;
+    .btn-guardar {
+        margin-top: 20px;
+        padding: 11px;
+        background-color: var(--color-primary);
         color: white;
-        font-weight: bold;
+        font-family: var(--font-body), serif;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: var(--radius-btn);
+        cursor: pointer;
+        transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-guardar:hover {
+        background-color: var(--color-primary-hover);
+        transform: translateY(-1px);
     }

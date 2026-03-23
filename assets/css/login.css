@@ -1,125 +1,166 @@
-    /* Reset básico */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
-    body {
-        font-family: Arial, sans-serif; /* Letra usada en toda la página*/
-        background-color: #f2f2f2;
-    }
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+}
 
-    /* Barra superior */
-    .barra-superior {
-        height: 60px;
-        background-color: #cfcfcf;
-    }
+/* Contenedor principal */
+.contenedor-login {
+    display: flex;
+    height: calc(100vh - 64px); /* 100% de la pantalla - 64px (header fijo) */
+    margin-left: 220px;         /* deja espacio para la sidebar */
+    padding-top: 64px;          /* deja espacio para el header */
+}
 
-    /* Contenedor principal */
-    .contenedor-login {
-        display: flex;  /* Para colocar los elementos en línea*/
-        height: calc(100vh - 60px); /* 100% de la pantalla - 60px (marco superior)*/
-    }
+/* Lado izquierdo */
+.lado-izquierdo {
+    flex: 1;
+    position: relative;
+    background: url("../images/foto_portada.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
-    /* Lado izquierdo */
-    .lado-izquierdo {
-        flex: 1;
-        position: relative;
-        background: url("../images/foto_portada.png") center/cover no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
+/* Capa oscura encima de la imagen */
+.overlay {
+    position: absolute;
+    inset: 0;                           /* shorthand de top/right/bottom/left: 0 */
+    background: rgba(20, 8, 2, 0.55);
+}
 
-    /* Capa oscura encima de la imagen */
-    .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-    }
+/* Contenido encima del overlay */
+.contenido-izquierda {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 0 40px;
+}
 
-    /* Contenido encima del overlay */
-    .contenido-izquierda {
-        position: relative;
-        text-align: center;
-        z-index: 2;
-    }
-    .lado-izquierdo h1 {
-        font-size: 48px;
-        letter-spacing: 4px;
-        margin-bottom: 20px;
-    }
+.lado-izquierdo h1 {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: 52px;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
 
-    .lado-izquierdo p {
-        font-size: 18px;
-        opacity: 0.9;
-    }
-    /* Lado derecho */
-    .lado-derecho {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.lado-izquierdo p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    opacity: 0.85;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
 
-    /* Caja del formulario */
-    .form-container {
-        width: 320px;
-        padding: 30px;
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        text-align: center;
-    }
+/* Lado derecho */
+.lado-derecho {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg);
+}
 
-    /* Icono */
-    .icono-usuario img {
-        width: 80px;
-        margin-bottom: 15px;
-    }
+/* Caja del formulario */
+.form-container {
+    width: 340px;
+    padding: 36px 32px;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-hover);
+    text-align: center;
+}
 
-    /* Inputs */
-    .grupo-input {
-        margin-bottom: 15px;
-        text-align: left;
-    }
+/* Icono */
+.icono-usuario img {
+    width: 72px;
+    margin-bottom: 12px;
+    opacity: 0.7;
+}
 
-    .grupo-input input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        transition: 0.3s;
-    }
+.form-container h2 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--color-text-dark);
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+}
 
-    .grupo-input input:focus {
-        border-color: #111;
-        outline: none;
-    }
+/* Inputs */
+.grupo-input {
+    margin-bottom: 16px;
+    text-align: left;
+}
 
-    /* Botón */
-    .boton-login {
-        width: 100%;
-        padding: 12px;
-        background-color: #111;
-        color: white;
-        border-radius: 6px;
-        border: none;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+.grupo-input label {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-body);
+    display: block;
+    margin-bottom: 6px;
+}
 
-    .boton-login:hover {
-        background-color: #333;
-    }
+.grupo-input input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 0;
+    font-family: var(--font-body);
+    font-size: 14px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg);
+    color: var(--color-text-body);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
 
-    /* Links */
-    .links-extra {
-        margin-top: 15px;
-        display: flex;
-        flex-direction: column;
-    }
+.grupo-input input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-pale);
+    outline: none;
+}
+
+/* Botón */
+.boton-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--radius-btn);
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.boton-login:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Links */
+.links-extra {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.links-extra a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.links-extra a:hover {
+    text-decoration: underline;
+}

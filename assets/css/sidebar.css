@@ -15,7 +15,7 @@
     /* Para centrar el contenido al poner la sidebar */
     main {
         margin-left: 240px;     /* El mismo ancho que la sidebar */
-        padding: 40px;
+        padding-top: 64px;
     }
 
     .menu-navegacion{
@@ -24,6 +24,8 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
+
+        padding: 0 8px;
 
         li a img{
             width: 25px;

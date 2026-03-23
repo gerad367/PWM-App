@@ -26,3 +26,6 @@ if (mood === "romantico") {
     textos[1].innerHTML = "Potencia máxima";
     textos[2].innerHTML = "Sabores intensos que despiertan todos tus sentidos";
 }
+
+/* Añade una clase al body con el mood activo */
+document.body.classList.add("mood-" + mood);

@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     gap: 25px;
-    padding: 70px;
+    padding: 80px 80px 36px;
     box-sizing: border-box;
 
     /* Empujar para que esquive la barra lateral*/
@@ -14,7 +14,7 @@
     position: relative;
     top: 40px;
 }
-    .textos_romantico{
+    #mood-texts{
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -23,32 +23,77 @@
     }
 
     /* El primer texto ("romantico") */
-    .textos_romantico h3:first-of-type{
+    #mood-texts h3:first-of-type{
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin:0;
+
     }
 
-    .textos_romantico h2{
+    #mood-texts h2{
         font-size: 48px;
         font-weight: 900;
         letter-spacing: -1px;
         margin:0;
+
+        color: var(--color-text-dark);
     }
 
-    .textos_romantico h3:last-of-type{
+    #mood-texts h3:last-of-type{
         font-size: 18px;
         font-weight: 400;
         margin: 0;
-    }
 
+        color: var(--color-text-muted);
+    }
 
 #mood-title img{
     width: 120px;
     height: auto;
     border-radius: 20px;
+    box-shadow: var(--shadow-card);
+}
+
+/* COLORES POR MOOD
+   Sobreescriben las variables del :root
+   solo en la página de mood activa */
+
+.mood-romantico {
+    --color-primary:      #D4547A;
+    --color-primary-hover:#E87096;
+    --color-primary-pale: #FFE0EA;
+    --color-bg:           #FFF5F8;
+    --color-bg-section:   #FAE8EE;
+    --color-border:       #F0C8D8;
+}
+
+.mood-feliz {
+    --color-primary:      #E8A020;
+    --color-primary-hover:#F5B840;
+    --color-primary-pale: #FFF0CC;
+    --color-bg:           #FFFCF0;
+    --color-bg-section:   #FFF5D6;
+    --color-border:       #F0DFA0;
+}
+
+.mood-energetico {
+    --color-primary:      #2EAA6A;
+    --color-primary-hover:#3EC87E;
+    --color-primary-pale: #D4F5E4;
+    --color-bg:           #F4FFF9;
+    --color-bg-section:   #E0F8EC;
+    --color-border:       #A8E8C4;
+}
+
+.mood-triste {
+    --color-primary:      #4A7AB5;
+    --color-primary-hover:#6A9AD5;
+    --color-primary-pale: #DCE8F8;
+    --color-bg:           #F4F8FF;
+    --color-bg-section:   #E4EEF8;
+    --color-border:       #B8D0EC;
 }
 
 
