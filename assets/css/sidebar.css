@@ -52,3 +52,29 @@
             }
         }
     }
+    @media (max-width: 768px) {
+
+        /* Mostrar botón */
+        #menu-toggle {
+            display: block;
+        }
+
+        /* Sidebar oculto */
+        .sidebar-lateral {
+            left: -250px !important;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        /* Sidebar abierto */
+        .sidebar-lateral.active {
+            left: 0 !important;
+        }
+
+        /* El contenido ocupa toda la pantalla */
+        main {
+            margin-left: 0 !important;
+        }
+
+    }
+
