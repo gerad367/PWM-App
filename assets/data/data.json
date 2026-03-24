@@ -5,7 +5,7 @@
       "nombre": "Goiko",
       "tipo": "Hamburguesería",
       "valoracion": 4.5,
-      "imagen": "assets/images/restaurants_pictures/goiko.png",
+      "imagen": "../assets/images/restaurants_pictures/goiko.png",
       "horario": {
         "lunes": "13:00 - 23:30",
         "martes": "13:00 - 23:30",
@@ -89,7 +89,7 @@
       "nombre": "Organic Jungle",
       "tipo": "Comida Saludable",
       "valoracion": 3.5,
-      "imagen": "assets/images/restaurants_pictures/organicJungle.png",
+      "imagen": "../assets/images/restaurants_pictures/organicJungle.png",
       "horario": {
         "lunes": "9:00 - 17:00",
         "martes": "9:00 - 17:00",
@@ -148,7 +148,7 @@
       "nombre": "McDonalds",
       "tipo": "Comida rápida",
       "valoracion": 2.3,
-      "imagen": "assets/images/restaurants_pictures/mcdonalds.png",
+      "imagen": "../assets/images/restaurants_pictures/mcdonalds.png",
       "horario": {
         "lunes": "11:00–1:00",
         "martes": "11:00–1:00",
@@ -204,7 +204,7 @@
       "nombre": "Sushi Sakura Hanami",
       "tipo": "Comida asiatica",
       "valoracion": 5.0,
-      "imagen": "assets/images/restaurants_pictures/sakuraHanami.png",
+      "imagen": "../assets/images/restaurants_pictures/sakuraHanami.png",
       "horario": {
         "lunes": "12:00–17:00",
         "martes": "20:00–24:00",
@@ -215,7 +215,7 @@
         "domingo": "20:00–24:00"
       },
       "moods": [
-        "romántico",
+        "romantico",
         "feliz"
       ],
       "menu": [
@@ -268,7 +268,7 @@
       "nombre": "The Grill House Restaurant",
       "tipo": "Steak house",
       "valoracion": 4.5,
-      "imagen": "assets/images/restaurants_pictures/GrillHouse.png",
+      "imagen": "../assets/images/restaurants_pictures/GrillHouse.png",
       "horario": {
         "lunes": "12:00–17:00",
         "martes": "20:00–22:00",
@@ -279,7 +279,7 @@
         "domingo": "Cerrado"
       },
       "moods": [
-        "romántico",
+        "romantico",
         "feliz",
         "energetico"
       ],
@@ -338,7 +338,7 @@
       "nombre": "Honest Greens",
       "tipo": "Comida saludable",
       "valoracion": 5.0,
-      "imagen": "assets/images/restaurants_pictures/HonestGreens.png",
+      "imagen": "../assets/images/restaurants_pictures/HonestGreens.png",
       "horario": {
         "lunes": "Cerrado",
         "martes": "20:00–24:00",
