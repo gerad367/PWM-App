@@ -16,6 +16,10 @@
 #title {
     margin: 0 0 0 50px;
     font-size: 60px;
+    font-family: var(--font-title), sans-serif;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--color-text-dark);
 }
 
 /* Acciones derecha */
@@ -54,3 +58,4 @@
 .btn-vaciar:hover {
     background: #333;
 }
+

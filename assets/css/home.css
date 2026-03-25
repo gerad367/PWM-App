@@ -24,15 +24,13 @@
     .pregunta-izquierda {
         font-family: var(--font-title), sans-serif;
         text-align: left;
-        font-size:70px;
-        font-weight: 600;
+        font-size: 64px;
+        font-weight: 800;
         margin-bottom: 10px;
-
-        line-height: 1.0;
-        letter-spacing: -3px;
+        line-height: 1.1;
+        letter-spacing: -1.5px;
         color: var(--color-text-dark);
-        max-width: 600px;         /* evita que choque con la imagen */
-
+        max-width: 600px;
     }
 
     .pregunta-centro{
@@ -163,10 +161,10 @@
         h2{
             font-family: var(--font-title), serif;
             font-weight: 700;
-            font-size: 22px;
+            font-size: 28px;
             color: var(--color-text-dark);
             text-align: center;
-            padding:36px 0 24px;
+            padding: 36px 0 24px;
             letter-spacing: -0.5px;
         }
 

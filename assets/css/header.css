@@ -1,5 +1,6 @@
 /* Para importar tipografias de internet */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans&display=swap');
 
 /* Reset básico global */
 *, *::before, *::after {
@@ -27,7 +28,7 @@
     --color-danger:        #D9534F;
 
     /* Tipografía */
-    --font-title: 'Syne', sans-serif;
+    --font-title: 'Poppins', sans-serif;
     --font-body:  'DM Sans', sans-serif;
 
     /* Radios */
