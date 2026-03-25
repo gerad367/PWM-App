@@ -19,6 +19,11 @@
 
     #portada {
         margin-right: 20px;
+
+        img{
+            width: auto;
+            height: 500px;
+        }
     }
 
     #extra {

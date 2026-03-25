@@ -39,31 +39,13 @@ document.body.classList.add("mood-" + mood);
 fetch("../assets/data/data.json")
     .then(res => res.json())
     .then(data => {
+        const container = document.querySelector(".recomendaciones-segun-mood");
+
         data.restaurantes.forEach(restaurant => {
             restaurant.moods.forEach(eachMood => {
                 if(eachMood === mood){
-                    createMoodCard(restaurant);
+                    container.innerHTML += createCard(restaurant);
                 }
             })
         })
     })
-
-function createMoodCard(restaurant) {
-
-    const container = document.querySelector(".recomendaciones-segun-mood");
-
-    const card = `
-     <article class="tarjeta2-restaurante">
-            <a href="../pages/restaurant.html?id=${restaurant.id}">
-                <img src="${restaurant.imagen}" class="foto-restaurante" alt="${restaurant.nombre}">
-                <button class="btn-favorito">
-                    <img src="../assets/images/favorito2.svg" alt="like">
-                </button>
-                <h3>${restaurant.nombre}</h3>
-            </a>
-            <p>${restaurant.tipo} • ⭐ ${restaurant.valoracion}</p>
-     </article>`;
-
-    // Inyectar la tarjeta al html
-    container.innerHTML += card;
-}

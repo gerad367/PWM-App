@@ -23,7 +23,7 @@
         {
           "seccion": "Entrantes",
           "nombre_plato": "Crispy Chicken Wings",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/starters/crispyChickenWings.png",
           "ingredientes": [
             "pollo",
             "salsa barbacoa"
@@ -32,7 +32,7 @@
         {
           "seccion": "Entrantes",
           "nombre_plato": "Chicken Tenders",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/starters/chickenTenders.png",
           "ingredientes": [
             "pollo",
             "salsa Goiko"
@@ -41,7 +41,7 @@
         {
           "seccion": "Hamburguesas",
           "nombre_plato": "Kevin Bacon",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/KevinBacon.png",
           "ingredientes": [
             "pan",
             "carne",
@@ -52,7 +52,7 @@
         {
           "seccion": "Hamburguesas",
           "nombre_plato": "Pigma",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/Pigma.png",
           "ingredientes": [
             "pan",
             "Huevo frito",
@@ -63,7 +63,7 @@
         {
           "seccion": "Hamburguesas",
           "nombre_plato": "Chick Norris",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/ChickNorris.png",
           "ingredientes": [
             "pan",
             "pollo",
@@ -76,7 +76,7 @@
         {
           "seccion": "Bebidas",
           "nombre_plato": "Goiko Ice Tea",
-          "foto": "",
+          "foto": "../assets/images/menu_restaurants/Goiko/drinks/iceTea.png",
           "ingredientes": [
             "té",
             "limón"
@@ -107,7 +107,7 @@
         {
           "seccion": "Almuerzo",
           "nombre_plato": "Curry Tai Verduras",
-          "foto": "assets/images/menu_restaurants/OrganicJungle/CurryTaiVerduras.png",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/dishes/CurryTaiVerduras.png",
           "ingredientes": [
             "verduras",
             "salsa de curry",
@@ -119,7 +119,7 @@
         {
           "seccion": "bebidas",
           "nombre_plato": "Tiramisu Ice Coffee",
-          "foto": "assets/images/menu_restaurants/OrganicJungle/TiramisuIceCoffe.png",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/Drinks/TiramisuIceCoffe.png",
           "ingredientes": [
             "café",
             "leche fresca",
@@ -131,7 +131,7 @@
         {
           "seccion": "Entrantes",
           "nombre_plato": "Quesadillas",
-          "foto": "assets/images/menu_restaurants/OrganicJungle/Quesadillas.png",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/dishes/Quesadillas.png",
           "ingredientes": [
             "Tortilla de trigo",
             "queso cheddar",
@@ -166,7 +166,7 @@
         {
           "seccion": "Burgers",
           "nombre_plato": "McExtreme Pulled Pork Doble",
-          "foto": "assets/images/menu_restaurants/McDonalds/BurgersSection/McExtremePulledPorkDoble.png",
+          "foto": "../assets/images/menu_restaurants/McDonalds/BurgersSection/McExtremePulledPorkDoble.png",
           "ingredientes": [
             "carne de vacuno",
             "pulled pork BBQ",
@@ -179,7 +179,7 @@
         {
           "seccion": "Burgers",
           "nombre_plato": "McRoyal Deluxe",
-          "foto": "assets/images/menu_restaurants/McDonalds/BurgersSection/McRoyalDeluxe.png",
+          "foto": "../assets/images/menu_restaurants/McDonalds/BurgersSection/McRoyalDeluxe.png",
           "ingredientes": [
             "tomate",
             "lechuga",
@@ -191,7 +191,7 @@
         {
           "seccion": "Postres",
           "nombre_plato": "McFlurry Oreo",
-          "foto": "assets/images/menu_restaurants/McDonalds/Desserts/McFlurryOreo.png",
+          "foto": "../assets/images/menu_restaurants/McDonalds/Desserts/McFlurryOreo.png",
           "ingredientes": [
             "helado sabor vainilla",
             "galleas oreo"
@@ -222,7 +222,7 @@
         {
           "seccion": "Carpaccio",
           "nombre_plato": "Carpaccio de atún",
-          "foto": "assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioAtun.png",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioAtun.png",
           "ingredientes": [
             "atun rojo",
             "tomates cherry",
@@ -233,7 +233,7 @@
         {
           "seccion": "Carpaccio",
           "nombre_plato": "Carpaccio salmón picante",
-          "foto": "assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioSalmon.png",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioSalmon.png",
           "ingredientes": [
             "salmón",
             "cebolla",
@@ -245,7 +245,7 @@
         {
           "seccion": "Nigiri",
           "nombre_plato": "Nigiri atún",
-          "foto": "assets/images/menu_restaurants/SushiSakuraHanami/NigiriAtun.png",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/NigiriAtun.png",
           "ingredientes": [
             "arroz japonés",
             "atun rojo"
@@ -254,7 +254,7 @@
         {
           "seccion": "Nigiri",
           "nombre_plato": "Nigiri pez limon",
-          "foto": "assets/images/menu_restaurants/SushiSakuraHanami/NigiriPezLimon.png",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/NigiriPezLimon.png",
           "ingredientes": [
             "Arroz tradicional",
             "pez limón fresco"
@@ -287,7 +287,7 @@
         {
           "seccion": "Platos principales",
           "nombre_plato": "Costillas al horno",
-          "foto": "assets/images/menu_restaurants/TheGrillHouseRestaurant/BakedRibs.png",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/BakedRibs.png",
           "ingredientes": [
             "costillas",
             "barbacoa"
@@ -296,7 +296,7 @@
         {
           "seccion": "Pizzas",
           "nombre_plato": "Pizza Jamon Serrano",
-          "foto": "assets/images/menu_restaurants/TheGrillHouseRestaurant/Pizza1.png",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/Pizza1.png",
           "ingredientes": [
             "Jamon serrano",
             "Rucula",
@@ -306,7 +306,7 @@
         {
           "seccion": "Platos principales",
           "nombre_plato": "Lomo Alto Wagyu",
-          "foto": "assets/images/menu_restaurants/TheGrillHouseRestaurant/steak.png",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/steak.png",
           "ingredientes": [
             "Lomo",
             "Salsa Whisky"
@@ -315,7 +315,7 @@
         {
           "seccion": "Platos principales",
           "nombre_plato": "Pulpo a la brasa",
-          "foto": "assets/images/menu_restaurants/TheGrillHouseRestaurant/Octopus.png",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/Octopus.png",
           "ingredientes": [
             "Pulpo",
             "Papas"
@@ -325,7 +325,7 @@
         {
           "seccion": "Platos principales",
           "nombre_plato": "Tataki de atun",
-          "foto": "assets/images/menu_restaurants/TheGrillHouseRestaurant/AtunTataki.png",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/AtunTataki.png",
           "ingredientes": [
             "Atun"
           ]
@@ -356,7 +356,7 @@
         {
           "seccion": "Proteinas",
           "nombre_plato": "Pollo con limon y Mostaza",
-          "foto": "assets/images/menu_restaurants/HonestGreens/PolloConLimonMostaza.png",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/PolloConLimonMostaza.png",
           "ingredientes": [
             "Pollo",
             "salsa de limón",
@@ -367,7 +367,7 @@
         {
           "seccion": "Proteinas",
           "nombre_plato": "Pollo Piri Piri",
-          "foto": "assets/images/menu_restaurants/HonestGreens/PolloPiriPiri.png",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/PolloPiriPiri.png",
           "ingredientes": [
             "pollo",
             "salsa hot honey piri",
@@ -380,7 +380,7 @@
         {
           "seccion": "Acompañamientos",
           "nombre_plato": "Calabaza a la brasa",
-          "foto": "assets/images/menu_restaurants/HonestGreens/CalabazaALaBrasa.png",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/CalabazaALaBrasa.png",
           "ingredientes": [
             "calabaza",
             "alioli plant-based",
