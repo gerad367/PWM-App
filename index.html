@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>MoodMeal App</title>
+
+    <script src="assets/js/cookies.js"></script>
+    <script>
+        let userLogged = getCookie("userLogged");
+        if (userLogged == null) {
+            window.location.pathname = "/PWM-App/pages/login.html";
+        } else if (userLogged === "true") {
+            window.location.pathname = "/PWM-App/pages/home.html";
+        }
+
+    </script>
 </head>
 <body>
-    <h1>Buenasss, este es el inicio</h1>
 </body>
 </html>
