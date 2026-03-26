@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
 
+    <script src="../assets/js/cookies.js"></script>
+    <script>
+        if (getCookie("userLogged") === null) {
+            window.location.pathname = "/PWM-App/pages/login.html";
+        }
+    </script>
 </head>
 <body>
     <header id="header-template"></header>
@@ -22,7 +28,7 @@
             <a href="#preferencias" class="opcion">Preferencias</a>
             <a href="#notificaciones" class="opcion">Notificaciones</a>
             <a href="#privacidad" class="opcion">Privacidad</a>
-            <a href="#" class="opcion eliminar">Eliminar cuenta</a>
+            <a href="#" class="opcion eliminar" id="delete-account">Eliminar cuenta</a>
         </div>
 
         <div class="contenido-derecha">
@@ -109,6 +115,16 @@
 
     <footer id="footer-template"></footer>
     <script src="../assets/js/templates.js"></script>
+
+    <script>
+        const cerrarSesionBtn = document.querySelector("#delete-account");
+        cerrarSesionBtn.addEventListener('click', (event) => {
+            deleteCookie("username");
+            deleteCookie("email");
+            deleteCookie("userLogged");
+            window.location.pathname = "/PWM-App/pages/login.html";
+        })
+    </script>
 
 </body>
 </html>

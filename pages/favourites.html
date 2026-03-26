@@ -11,6 +11,12 @@
 
 	<link rel="stylesheet" href="../assets/css/cards.css">
 
+	<script src="../assets/js/cookies.js"></script>
+	<script>
+		if (getCookie("userLogged") === null) {
+			window.location.pathname = "/PWM-App/pages/login.html";
+		}
+	</script>
 </head>
 <body>
 	<!-- > Template header <-->
