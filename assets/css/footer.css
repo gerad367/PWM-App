@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-left: 220px;         /* respeta el ancho de la sidebar */
+    margin-left: 0;
 }
 
 .footer-copyright {
@@ -64,4 +64,22 @@
 .footer-redes img {
     width: 18px;
     height: 18px;
+}
+
+@media (max-width: 500px) {
+    .barra-footer {
+        height: 80px;
+        position: sticky;
+        z-index: 100;
+    }
+    .footer-contenido {
+        display: flex;
+        /*flex-direction: column;*/
+        flex-flow: column-reverse wrap;
+        gap: 10px;
+    }
+
+    .footer-redes {
+        margin-top: 10px;
+    }
 }
