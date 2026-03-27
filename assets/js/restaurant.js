@@ -133,5 +133,3 @@ function createRestaurantDetails(restaurant) {
         });
     });
 }
-
-// id, nombre, imagen, horario, menu(nombre plato, foto)

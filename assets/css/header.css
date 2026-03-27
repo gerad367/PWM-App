@@ -104,3 +104,13 @@ body {
     height: 22px;
     opacity: 0.7;
 }
+
+@media (max-width: 1024px){
+    .barra-gris-superior {
+        padding: 0 16px;
+    }
+
+    .logo-nombre-app h1 {
+        padding-left: 0;
+    }
+}
