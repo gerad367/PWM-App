@@ -74,7 +74,7 @@ body {
     display: flex;
     justify-content: center;
     flex: 1;
-    padding-left: 220px;
+    /*padding-left: 220px;*/
 }
 
 /* Icono usuario — esquina derecha */
