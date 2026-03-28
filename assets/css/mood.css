@@ -56,6 +56,18 @@
     box-shadow: var(--shadow-card);
 }
 
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 99;
+}
+
+#overlay.active {
+    display: block;
+}
+
 /* COLORES POR MOOD
    Sobreescriben las variables del :root
    solo en la página de mood activa */
@@ -96,5 +108,37 @@
     --color-border:       #B8D0EC;
 }
 
+
+@media (max-width: 1024px) {
+    #mood-title {
+        margin-left: 0;
+        width: 100%;
+        padding: 100px 30px 30px;
+        top: 0;
+    }
+}
+
+/*------------------------------- Para movil ----------------------*/
+@media (max-width: 768px) {
+    #mood-title {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 90px 20px 24px;
+        gap: 16px;
+    }
+
+    #mood-title img {
+        width: 80px;
+    }
+
+    #mood-texts h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    #mood-texts h3:last-of-type {
+        font-size: 15px;
+    }
+}
 
 

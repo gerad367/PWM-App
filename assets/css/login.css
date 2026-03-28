@@ -164,3 +164,35 @@ body {
 .links-extra a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1024px) {
+    .contenedor-login {
+        margin-left: 0;    /* quitar el margen de la sidebar */
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;         /* porcentaje en lugar de píxeles fijos */
+        max-width: 340px;  /* nunca más grande que 340px */
+    }
+    .contenedor-login {
+        flex-direction: column; /* columna en vez de fila */
+        height: auto;           /* quita la altura fija */
+        min-height: calc(100vh - 64px);
+        padding-top: 0;         /* quita el padding top */
+        justify-content: center;
+    }
+
+    .lado-izquierdo {
+        display: none;        /* ocultarlo en móvil */
+    }
+
+    .lado-derecho {
+        padding: 20px;        /* algo de espacio */
+    }
+
+    .form-container {
+        width: 100%;          /* que ocupe todo */
+    }
+}

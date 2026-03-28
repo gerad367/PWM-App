@@ -136,3 +136,65 @@
         background: var(--color-primary);
         color: white;
     }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 99;
+    }
+
+    #overlay.active {
+        display: block;
+    }
+
+    @media (max-width: 1024px){
+        #detalles {
+            width: 100%;   /* ← ocupa todo el ancho */
+        }
+
+        #restaurant-main {
+            margin: 72px 0 72px 0;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 20px;
+        }
+    }
+
+
+    @media (max-width: 768px){
+        #restaurant-main {
+            margin: 64px 0 64px 0;
+            padding: 16px;
+        }
+
+        #portada img {
+            height: 220px;
+        }
+
+        #horario {
+            display: block;      /*  convierte la tabla en bloque */
+            overflow-x: auto;    /*  scroll en la propia tabla */
+            margin-top: 40px;
+        }
+
+        #horario table {
+            min-width: 500px;  /* scroll horizontal */
+        }
+        #extra {
+            margin-top: 12px;
+            padding: 8px 0;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+
+        #extra img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #menu-toggle {
+            display: flex !important;
+        }
+    }

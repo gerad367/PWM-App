@@ -59,3 +59,36 @@
     background: #333;
 }
 
+@media (max-width: 1024px) {
+    .zona-superior-favoritos {
+        margin-left: 0;
+        width: 100%;
+        padding: 100px 20px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .zona-superior-favoritos {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 90px 20px 16px;
+    }
+
+    #title {
+        margin: 0;
+        font-size: 36px;
+    }
+
+    .acciones-favoritos {
+        margin-right: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-vaciar {
+        border-radius: var(--radius-btn);
+        background: var(--color-text-dark);
+    }
+}
+
