@@ -1,231 +1,211 @@
-    /* Para el home */
-    /* Ya se inyectó el header y footer en el home*/
+/* Para el home */
+/* Ya se inyectó el header y footer en el home*/
 
-    .seccion-entrada{
-        margin: 0 auto 0 200px;
-        display: flex;
-        width: fit-content;
-        align-items: center;
-        justify-content: space-between; /* El gap hacia que se rompiera el zoom */
+.seccion-entrada{
+    margin: 0 auto 0 200px;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between; /* El gap hacia que se rompiera el zoom */
 
-        padding: 40px 60px;
-        img{
-            position: absolute;
+    padding: 40px 60px;
+    img{
+        position: absolute;
 
-            top: 40px;
-            right: 60px;
+        top: 40px;
+        right: 60px;
 
-            margin-top: 80px;
-            width: 150px;
-            height: 150px;
-        }
+        margin-top: 80px;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.pregunta-izquierda {
+    font-family: var(--font-title), sans-serif;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: var(--color-text-dark);
+    max-width: 600px;
+}
+
+.pregunta-centro{
+    text-align: center;
+    font-size:14px;
+    color:#666;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Buscador {
+    display: flex;                                          /* Obliga al input y a la imagen a estar en la fila */
+    width: min(650px, 90%);                                 /* min elige el valor mas pequeño de los dos. El 90% es el ancho del conedor del padre */
+    height: 54px;
+
+    /* Margen: Arriba, automatico a los lados, abajo*/
+    margin: 50px auto 60px;                                 /* auto a los lados para centrarlo: el navegador calcula
+                                                               cuanto espacio sobra en la pantalla y lo divide en 2 */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-btn);
+    overflow: hidden;                                       /* Corta lo que sobresalga */
+
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-card);
+
+    /* .Buscador:focus- within: describe un estado (cuando el usuario ha hecho clic dentro del buscador) */
+    /* Si fuera solo :focus se pondria en el input directamente pero como el buscador es un div q contiene le input y el button...*/
+    &:focus-within{
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 1px var(--color-primary-pale)
     }
 
-    .pregunta-izquierda {
-        font-family: var(--font-title), sans-serif;
-        text-align: left;
-        font-size:70px;
-        font-weight: 600;
-        margin-bottom: 10px;
+    input{
+        flex: 1;                                            /* Coge por completo el espacio que sobre*/
+        border: none;
+        outline: none;
+        font-family: var(--font-body), serif;
+        font-size: 16px;
+        color: var(--color-text-body);
+        background: transparent;
+        padding-left: 20px;
 
-        line-height: 1.0;
-        letter-spacing: -3px;
-        color: var(--color-text-dark);
-        max-width: 600px;         /* evita que choque con la imagen */
-
-    }
-
-    .pregunta-centro{
-        text-align: center;
-        font-size:14px;
-        color:#666;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .Buscador {
-        display: flex;                                          /* Obliga al input y a la imagen a estar en la fila */
-        width: min(650px, 90%);                                 /* min elige el valor mas pequeño de los dos. El 90% es el ancho del conedor del padre */
-        height: 54px;
-
-        /* Margen: Arriba, automatico a los lados, abajo*/
-        margin: 50px auto 60px;                                 /* auto a los lados para centrarlo: el navegador calcula
-                                                                   cuanto espacio sobra en la pantalla y lo divide en 2 */
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-btn);
-        overflow: hidden;                                       /* Corta lo que sobresalga */
-
-        background: var(--color-bg-card);
-        box-shadow: var(--shadow-card);
-
-        /* .Buscador:focus- within: describe un estado (cuando el usuario ha hecho clic dentro del buscador) */
-        /* Si fuera solo :focus se pondria en el input directamente pero como el buscador es un div q contiene le input y el button...*/
-        &:focus-within{
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 1px var(--color-primary-pale)
-        }
-
-        input{
-            flex: 1;                                            /* Coge por completo el espacio que sobre*/
-            border: none;
-            outline: none;
-            font-family: var(--font-body), serif;
-            font-size: 16px;
-            color: var(--color-text-body);
-            background: transparent;
-            padding-left: 20px;
-
-            /* placeholder es el texto q aparece dentro del buscador */
-            &::placeholder{
-                color: var(--color-text-muted);
-            }
-        }
-
-        button{
-            width: 54px;
-            height: 100%;
-            background:var(--color-bg);
-            border: none;
-            border-left: 1px solid var(--color-border);
-            cursor: pointer;
-
-            /* Para centrar la lupa dentro del botón */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &:hover{
-                background: var(--color-primary-pale);
-            }
-
-            img{
-                width: 24px;
-                height: auto;
-                opacity: 0.6;
-            }
-        }
-    }
-
-    .seccion-mood{
-        text-align: center;
-
-        .pregunta-centro{
-            font-family: var(--font-body), serif;
-            font-size: 12px;
+        /* placeholder es el texto q aparece dentro del buscador */
+        &::placeholder{
             color: var(--color-text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
         }
     }
 
+    button{
+        width: 54px;
+        height: 100%;
+        background:var(--color-bg);
+        border: none;
+        border-left: 1px solid var(--color-border);
+        cursor: pointer;
 
-    .contenedor-moods{
+        /* Para centrar la lupa dentro del botón */
         display: flex;
         justify-content: center;
-        gap: 28px;                      /* Para separarlos */
-        margin: 20px auto 80px;
+        align-items: center;
 
-        .boton-mood{
+        &:hover{
+            background: var(--color-primary-pale);
+        }
+
+        img{
+            width: 24px;
+            height: auto;
+            opacity: 0.6;
+        }
+    }
+}
+
+.seccion-mood{
+    text-align: center;
+
+    .pregunta-centro{
+        font-family: var(--font-body), serif;
+        font-size: 12px;
+        color: var(--color-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+}
+
+
+.contenedor-moods{
+    display: flex;
+    justify-content: center;
+    gap: 28px;                      /* Para separarlos */
+    margin: 20px auto 80px;
+
+    .boton-mood{
+        width: 100px;
+        height: 100px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background: none;
+
+        img {
             width: 100px;
             height: 100px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            background: none;
+        }
 
-            img {
-                width: 100px;
-                height: 100px;
+        &:hover{
+            transform: scale(1.12) translateY(-4px);
+        }
+    }
+}
+
+.contenedor-recomendaciones-restaurantes{
+    background-color:var(--color-bg-section);
+    width: 100%;
+    height: auto;
+    margin-bottom: 90px;
+    margin-left: -40px;
+    margin-right: -40px; /*cacela el padding del main definido en sidebar*/
+    padding-left: 40px;  /*pero el contenido interior si respeta el espacio*/
+    padding-right: 40px;
+    border: none;
+    border-top: 1px solid var(--color-border);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
+    /* display: flex; ERROR. solo da órdenes a hijos directos (en este caso h2)*/
+
+    h2{
+        font-family: var(--font-title), serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--color-text-dark);
+        text-align: center;
+        padding: 36px 0 24px;
+        letter-spacing: -0.5px;
+    }
+
+    .grid-restaurantes{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        padding: 10px 10px 80px;
+        flex-wrap: wrap;
+
+    }
+}
+
+/* PARA MOVIL */
+@media (max-width: 1024px){
+
+    .seccion-entrada{
+        margin: 0 0 0 0;
+        padding: 10px 30px;
+    }
+
+    .seccion-entrada .pregunta-izquierda{
+        font-size: 30px;
+    }
+    .seccion-entrada img{
+        display: none;
+    }
+
+    .contenedor-moods{
+        gap: 0px;
+        margin: 20px 20px 80px;
+
+        .boton-mood{
+
+            img{
+                width: 80px;
+                height: 80px;
             }
 
-            &:hover{
-                transform: scale(1.12) translateY(-4px);
-            }
         }
     }
 
-    .contenedor-recomendaciones-restaurantes{
-        background-color:var(--color-bg-section);
-        width: 100%;
-        height: auto;
-        margin-bottom: 90px;
-        margin-left: -40px;
-        margin-right: -40px; /*cacela el padding del main definido en sidebar*/
-        padding-left: 40px;  /*pero el contenido interior si respeta el espacio*/
-        padding-right: 40px;
-        border: none;
-        border-top: 1px solid var(--color-border);
-        box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
-        /* display: flex; ERROR. solo da órdenes a hijos directos (en este caso h2)*/
+}
 
-        h2{
-            font-family: var(--font-title), serif;
-            font-weight: 700;
-            font-size: 22px;
-            color: var(--color-text-dark);
-            text-align: center;
-            padding:36px 0 24px;
-            letter-spacing: -0.5px;
-        }
-
-        .grid-restaurantes{
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            padding: 10px 10px 80px;
-            flex-wrap: wrap;
-
-            .tarjeta-restaurante{
-                width: 300px;
-                background: var(--color-bg-card);
-                padding: 10px;
-                border-radius: 12px;
-                border: 1px solid var(--color-border);
-                overflow: hidden;
-                box-shadow: var(--shadow-card);
-                transition: transform 0.25s, box-shadow 0.25s;
-
-                &:hover{
-                    transform: translateY(-5px);
-                    box-shadow: var(--shadow-hover);
-                }
-
-                a{
-                    text-decoration: none;
-                    color:inherit;
-                }
-
-                img{
-                    width: 100%;
-                    height: 160px;
-                    object-fit: cover;      /* Para que las imagenes no se vean aplastadas */
-
-                }
-
-                h3{
-                    font-family: var(--font-title), serif;
-                    font-weight: 700;
-                    font-size: 15px;
-                    color: var(--color-primary);
-                    text-align: center;
-                    margin:10px 0 5px;
-                    text-decoration-color: transparent;
-                    transition: text-decoration-color 0.2s;
-
-                    &:hover{
-                        text-decoration-color: var(--color-primary);
-                    }
-                }
-
-                p{
-                    text-align: center;
-                    font-size: 14px;
-                    color: var(--color-text-muted);
-                    padding-bottom:14px;
-                }
-            }
-        }
-
-    }

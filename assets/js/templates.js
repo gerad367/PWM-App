@@ -11,5 +11,3 @@
     cargarTemplate('header-template', '../templates/header.html');
     cargarTemplate('footer-template', '../templates/footer.html');
     cargarTemplate('sidebar-template', '../templates/sidebar.html');
-
-    cargarTemplate('cards_content-template', '../templates/cards-template.html');

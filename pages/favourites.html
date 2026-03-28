@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<title>Favourites</title>
 	<link rel="stylesheet" href="../assets/css/favourites.css">
@@ -10,6 +11,7 @@
 	<link rel="stylesheet" href="../assets/css/sidebar.css">
 
 	<link rel="stylesheet" href="../assets/css/cards.css">
+	<link rel="stylesheet" href="../assets/css/home.css">
 
 	<script src="../assets/js/cookies.js"></script>
 	<script>
@@ -19,7 +21,6 @@
 	</script>
 </head>
 <body>
-	<!-- > Template header <-->
 	<header id="header-template"></header>
 
 	<aside id="sidebar-template"></aside>
@@ -38,9 +39,18 @@
 		</div>
 	</div>
 
-	<main id="cards_content-template"></main>
+	<main id="cards_content-template">
+		<section class="contenedor-recomendaciones-restaurantes">
+			<h2></h2>
+			<div class="grid-restaurantes"></div>
+		</section>
+	</main>
 
+	<footer id="footer-template"></footer>
+
+	<script src="../assets/js/utils.js"></script>
 	<script src="../assets/js/templates.js"></script>
+	<script src="../assets/js/favourites.js"></script>
 
 </body>
 </html>

@@ -65,3 +65,31 @@
     width: 18px;
     height: 18px;
 }
+
+/* oculto en formato escritorio */
+.nav-movil{
+    display: none;
+}
+
+/* PARA MOVIL */
+@media (max-width: 1024px) {
+    /* Ocultamos en movil el footer que habia antes para ordenador */
+    .footer-contenido {
+        display: none;
+    }
+
+    .nav-movil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 60px;
+    }
+
+
+    .nav-movil img {
+        width: 35px;
+        height: 35px;
+    }
+}

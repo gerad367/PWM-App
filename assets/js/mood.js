@@ -1,8 +1,13 @@
-imagen = document.getElementById("mood-image");
-textos = document.getElementById("mood-texts").children;
+imagen = document.querySelector("#mood-image");
+// children devuelve una lista de los hijos
+textos = document.querySelector("#mood-texts").children;
 console.log();
 
+// Mira la url cuando se hace clic en un mood: mood.html?mood=romantico
+// el mood=romantico se añade en el home.html (va a la pagina mood.html y añade: ?mood=romantico
 const query = window.location.search;
+
+// extrae el valor del "mood"
 mood = new URLSearchParams(query).get("mood");
 
 if (mood === "romantico") {
@@ -29,3 +34,18 @@ if (mood === "romantico") {
 
 /* Añade una clase al body con el mood activo */
 document.body.classList.add("mood-" + mood);
+
+
+fetch("../assets/data/data.json")
+    .then(res => res.json())
+    .then(data => {
+        const container = document.querySelector(".recomendaciones-segun-mood");
+
+        data.restaurantes.forEach(restaurant => {
+            restaurant.moods.forEach(eachMood => {
+                if(eachMood === mood){
+                    container.innerHTML += createCard(restaurant);
+                }
+            })
+        })
+    })

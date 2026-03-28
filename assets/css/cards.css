@@ -18,9 +18,7 @@
     padding-left: 60px;
     padding-right: 60px;
 
-    h3{
-        text-align: center;
-    }
+
 }
 
 .tarjeta2-restaurante {
@@ -60,6 +58,30 @@
         }
     }
 
+
+    a {
+        text-decoration: none; /* Quita el subrayado feo de los enlaces */
+        color: inherit;
+    }
+
+    h3 {
+        font-family: var(--font-body), sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--color-primary);
+        text-align: center;     /* ¡Esto centra el texto en CUALQUIER página! */
+        margin: 10px 0 5px;
+    }
+    
+}
+
+
+.tarjeta-meta {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 0 12px 14px;
+    font-family: var(--font-body);
 }
 
 /* Efecto para que la web parezca viva */

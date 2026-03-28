@@ -1,0 +1,415 @@
+{
+  "restaurantes": [
+    {
+      "id": 1,
+      "nombre": "Goiko",
+      "tipo": "Hamburguesería",
+      "valoracion": 4.5,
+      "imagen": "../assets/images/restaurants_pictures/goiko.png",
+      "horario": {
+        "lunes": "13:00 - 23:30",
+        "martes": "13:00 - 23:30",
+        "miercoles": "13:00 - 24:00",
+        "jueves": "13:00 - 24:00",
+        "viernes": "12:00 - 24:00",
+        "sábado": "12:00 - 24:00",
+        "domingo": "12:00 - 24:00"
+      },
+      "moods": [
+        "triste",
+        "feliz"
+      ],
+      "menu": [
+        {
+          "seccion": "Entrantes",
+          "nombre_plato": "Crispy Chicken Wings",
+          "foto": "../assets/images/menu_restaurants/Goiko/starters/crispyChickenWings.png",
+          "ingredientes": [
+            "pollo",
+            "salsa barbacoa"
+          ]
+        },
+        {
+          "seccion": "Entrantes",
+          "nombre_plato": "Chicken Tenders",
+          "foto": "../assets/images/menu_restaurants/Goiko/starters/chickenTenders.png",
+          "ingredientes": [
+            "pollo",
+            "salsa Goiko"
+          ]
+        },
+        {
+          "seccion": "Hamburguesas",
+          "nombre_plato": "Kevin Bacon",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/KevinBacon.png",
+          "ingredientes": [
+            "pan",
+            "carne",
+            "queso cheddar",
+            "cebolla crunchy"
+          ]
+        },
+        {
+          "seccion": "Hamburguesas",
+          "nombre_plato": "Pigma",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/Pigma.png",
+          "ingredientes": [
+            "pan",
+            "Huevo frito",
+            "queso cheddar",
+            "salsa Mayo Goiko"
+          ]
+        },
+        {
+          "seccion": "Hamburguesas",
+          "nombre_plato": "Chick Norris",
+          "foto": "../assets/images/menu_restaurants/Goiko/Burgers/ChickNorris.png",
+          "ingredientes": [
+            "pan",
+            "pollo",
+            "queso cheddar",
+            "bacon bits",
+            "cebolla crunchy",
+            "huevo frito"
+          ]
+        },
+        {
+          "seccion": "Bebidas",
+          "nombre_plato": "Goiko Ice Tea",
+          "foto": "../assets/images/menu_restaurants/Goiko/drinks/iceTea.png",
+          "ingredientes": [
+            "té",
+            "limón"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Organic Jungle",
+      "tipo": "Comida Saludable",
+      "valoracion": 3.5,
+      "imagen": "../assets/images/restaurants_pictures/organicJungle.png",
+      "horario": {
+        "lunes": "9:00 - 17:00",
+        "martes": "9:00 - 17:00",
+        "miercoles": "9:00 - 17:00",
+        "jueves": "9:00 - 19:00",
+        "viernes": "9:00 - 20:00",
+        "sábado": "9:00 - 20:00",
+        "domingo": "9:00 - 17:00"
+      },
+      "moods": [
+        "energetico",
+        "feliz"
+      ],
+      "menu": [
+        {
+          "seccion": "Almuerzo",
+          "nombre_plato": "Curry Tai Verduras",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/dishes/CurryTaiVerduras.png",
+          "ingredientes": [
+            "verduras",
+            "salsa de curry",
+            "leche de coco",
+            "pollo",
+            "arroz integral"
+          ]
+        },
+        {
+          "seccion": "bebidas",
+          "nombre_plato": "Tiramisu Ice Coffee",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/Drinks/TiramisuIceCoffe.png",
+          "ingredientes": [
+            "café",
+            "leche fresca",
+            "crema mascarpone",
+            "cacao",
+            "licor de café"
+          ]
+        },
+        {
+          "seccion": "Entrantes",
+          "nombre_plato": "Quesadillas",
+          "foto": "../assets/images/menu_restaurants/OrganicJungle/dishes/Quesadillas.png",
+          "ingredientes": [
+            "Tortilla de trigo",
+            "queso cheddar",
+            "queso blanco gratinado",
+            "pollo",
+            "crema de aguacate",
+            "pico de gallo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "McDonalds",
+      "tipo": "Comida rápida",
+      "valoracion": 2.3,
+      "imagen": "../assets/images/restaurants_pictures/mcdonalds.png",
+      "horario": {
+        "lunes": "11:00–1:00",
+        "martes": "11:00–1:00",
+        "miercoles": "11:00–1:00",
+        "jueves": "11:00–1:00",
+        "viernes": "11:00–1:00",
+        "sábado": "11:00–1:00",
+        "domingo": "11:00–1:00"
+      },
+      "moods": [
+        "triste",
+        "feliz"
+      ],
+      "menu": [
+        {
+          "seccion": "Burgers",
+          "nombre_plato": "McExtreme Pulled Pork Doble",
+          "foto": "../assets/images/menu_restaurants/McDonalds/BurgersSection/McExtremePulledPorkDoble.png",
+          "ingredientes": [
+            "carne de vacuno",
+            "pulled pork BBQ",
+            "gouda",
+            "bacon",
+            "cebolla crispy",
+            "mayonesa ahumada"
+          ]
+        },
+        {
+          "seccion": "Burgers",
+          "nombre_plato": "McRoyal Deluxe",
+          "foto": "../assets/images/menu_restaurants/McDonalds/BurgersSection/McRoyalDeluxe.png",
+          "ingredientes": [
+            "tomate",
+            "lechuga",
+            "queso fundido",
+            "carne",
+            "mayonesa"
+          ]
+        },
+        {
+          "seccion": "Postres",
+          "nombre_plato": "McFlurry Oreo",
+          "foto": "../assets/images/menu_restaurants/McDonalds/Desserts/McFlurryOreo.png",
+          "ingredientes": [
+            "helado sabor vainilla",
+            "galleas oreo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Sushi Sakura Hanami",
+      "tipo": "Comida asiatica",
+      "valoracion": 5.0,
+      "imagen": "../assets/images/restaurants_pictures/sakuraHanami.png",
+      "horario": {
+        "lunes": "12:00–17:00",
+        "martes": "20:00–24:00",
+        "miércoles": "12:00–17:00",
+        "jueves": "20:00–24:00",
+        "viernes": "20:00–24:00",
+        "sábado": "20:00–24:00",
+        "domingo": "20:00–24:00"
+      },
+      "moods": [
+        "romantico",
+        "feliz"
+      ],
+      "menu": [
+        {
+          "seccion": "Carpaccio",
+          "nombre_plato": "Carpaccio de atún",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioAtun.png",
+          "ingredientes": [
+            "atun rojo",
+            "tomates cherry",
+            "alga verde",
+            "salsa sesamo"
+          ]
+        },
+        {
+          "seccion": "Carpaccio",
+          "nombre_plato": "Carpaccio salmón picante",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/CarpaccioSalmon.png",
+          "ingredientes": [
+            "salmón",
+            "cebolla",
+            "tobiko",
+            "cacahuete",
+            "salsa ponzu citrica"
+          ]
+        },
+        {
+          "seccion": "Nigiri",
+          "nombre_plato": "Nigiri atún",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/NigiriAtun.png",
+          "ingredientes": [
+            "arroz japonés",
+            "atun rojo"
+          ]
+        },
+        {
+          "seccion": "Nigiri",
+          "nombre_plato": "Nigiri pez limon",
+          "foto": "../assets/images/menu_restaurants/SushiSakuraHanami/NigiriPezLimon.png",
+          "ingredientes": [
+            "Arroz tradicional",
+            "pez limón fresco"
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "nombre": "The Grill House Restaurant",
+      "tipo": "Steak house",
+      "valoracion": 4.5,
+      "imagen": "../assets/images/restaurants_pictures/GrillHouse.png",
+      "horario": {
+        "lunes": "12:00–17:00",
+        "martes": "20:00–22:00",
+        "miércoles": "12:00–17:00",
+        "jueves": "20:00–22:00",
+        "viernes": "20:00–22:00",
+        "sábado": "20:00–22:00",
+        "domingo": "Cerrado"
+      },
+      "moods": [
+        "romantico",
+        "feliz",
+        "energetico"
+      ],
+      "menu": [
+        {
+          "seccion": "Platos principales",
+          "nombre_plato": "Costillas al horno",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/BakedRibs.png",
+          "ingredientes": [
+            "costillas",
+            "barbacoa"
+          ]
+        },
+        {
+          "seccion": "Pizzas",
+          "nombre_plato": "Pizza Jamon Serrano",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/Pizza1.png",
+          "ingredientes": [
+            "Jamon serrano",
+            "Rucula",
+            "Tomate cherry"
+          ]
+        },
+        {
+          "seccion": "Platos principales",
+          "nombre_plato": "Lomo Alto Wagyu",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/steak.png",
+          "ingredientes": [
+            "Lomo",
+            "Salsa Whisky"
+          ]
+        },
+        {
+          "seccion": "Platos principales",
+          "nombre_plato": "Pulpo a la brasa",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/Octopus.png",
+          "ingredientes": [
+            "Pulpo",
+            "Papas"
+          ]
+        },
+
+        {
+          "seccion": "Platos principales",
+          "nombre_plato": "Tataki de atun",
+          "foto": "../assets/images/menu_restaurants/TheGrillHouseRestaurant/AtunTataki.png",
+          "ingredientes": [
+            "Atun"
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "nombre": "Honest Greens",
+      "tipo": "Comida saludable",
+      "valoracion": 5.0,
+      "imagen": "../assets/images/restaurants_pictures/HonestGreens.png",
+      "horario": {
+        "lunes": "Cerrado",
+        "martes": "20:00–24:00",
+        "miércoles": "12:00–17:00",
+        "jueves": "Cerrado",
+        "viernes": "20:00–24:00",
+        "sábado": "20:00–24:00",
+        "domingo": "20:00–24:00"
+      },
+      "moods": [
+        "energetico",
+        "feliz"
+      ],
+      "menu": [
+        {
+          "seccion": "Proteinas",
+          "nombre_plato": "Pollo con limon y Mostaza",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/PolloConLimonMostaza.png",
+          "ingredientes": [
+            "Pollo",
+            "salsa de limón",
+            "mostaza",
+            "pimienta"
+          ]
+        },
+        {
+          "seccion": "Proteinas",
+          "nombre_plato": "Pollo Piri Piri",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/PolloPiriPiri.png",
+          "ingredientes": [
+            "pollo",
+            "salsa hot honey piri",
+            "tomate",
+            "piña",
+            "maíz",
+            "cilantro"
+          ]
+        },
+        {
+          "seccion": "Acompañamientos",
+          "nombre_plato": "Calabaza a la brasa",
+          "foto": "../assets/images/menu_restaurants/HonestGreens/CalabazaALaBrasa.png",
+          "ingredientes": [
+            "calabaza",
+            "alioli plant-based",
+            "ajo negro",
+            "labneh",
+            "granada",
+            "pistacho",
+            "perejil"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "maria_garcia",
+      "password": "maria1234"
+    },
+    {
+      "id": 2,
+      "username": "carlos23",
+      "password": "carlos123"
+    },
+    {
+      "id": 3,
+      "username": "ana_lopez",
+      "password": "ana5678"
+    }
+  ]
+}
