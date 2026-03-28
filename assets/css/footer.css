@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-left: 220px;         /* respeta el ancho de la sidebar */
+    margin-left: 0;
 }
 
 .footer-copyright {
@@ -66,30 +66,20 @@
     height: 18px;
 }
 
-/* oculto en formato escritorio */
-.nav-movil{
-    display: none;
-}
-
-/* PARA MOVIL */
-@media (max-width: 1024px) {
-    /* Ocultamos en movil el footer que habia antes para ordenador */
+@media (max-width: 500px) {
+    .barra-footer {
+        height: 80px;
+        position: sticky;
+        z-index: 100;
+    }
     .footer-contenido {
-        display: none;
-    }
-
-    .nav-movil {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        gap: 60px;
+        /*flex-direction: column;*/
+        flex-flow: column-reverse wrap;
+        gap: 10px;
     }
 
-
-    .nav-movil img {
-        width: 35px;
-        height: 35px;
+    .footer-redes {
+        margin-top: 10px;
     }
 }

@@ -75,7 +75,7 @@ body {
     display: flex;
     justify-content: center;
     flex: 1;
-    padding-left: 220px;
+    /*padding-left: 220px;*/
 }
 
 /* Icono usuario — esquina derecha */
@@ -112,5 +112,19 @@ body {
 
     .logo-nombre-app h1 {
         padding-left: 0;
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block !important;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 9999;
     }
 }
