@@ -18,6 +18,9 @@
     /* ------------------- */
 
     .menu-ajustes {
+        h2{
+            margin-bottom: 20px;
+        }
         background-color: var(--color-bg-card);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-card);
@@ -100,7 +103,7 @@
     }
 
     /* ---- Formulario ---- */
-    .seccion h2 {
+    h2 {
         font-family: var(--font-title), serif;
         font-weight: 700;
         font-size: 20px;
