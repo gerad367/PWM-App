@@ -63,7 +63,6 @@ function createRestaurantDetails(restaurant) {
     const restaurantMenuContainer = document.querySelector("#restaurant-menu");
 
 
-/* ENTENDERLO */
 
 // 1. Sacar las categorías únicas del JSON
     const categoriasUnicas = [];
