@@ -229,12 +229,11 @@
     }
 
     #menu-toggle {
-        display: none;
         position: absolute;
 
         top: 50%;
         left: 15px;
-        transform: translateY(-50%); /* 🔥 centra verticalmente */
+        transform: translateY(-50%); /*  centra verticalmente */
 
         width: 40px;
         height: 40px;
@@ -276,7 +275,7 @@
             display: flex !important;
         }
 
-        /* 🔥 SECCION ENTRADA */
+        /*  SECCION ENTRADA */
         .seccion-entrada {
             margin: 0 auto !important;
             padding: 20px !important;
@@ -297,12 +296,12 @@
             height: 100px;
         }
 
-        /* 🔥 BUSCADOR */
+        /*  BUSCADOR */
         .Buscador {
             width: 90%;
         }
 
-        /* 🔥 MOODS */
+        /*  MOODS */
         .contenedor-moods {
             flex-wrap: wrap;
             gap: 15px;
@@ -319,10 +318,10 @@
             height: 70px;
         }
 
-        /* 🔥 RESTAURANTES */
+        /*  RESTAURANTES */
         .contenedor-recomendaciones-restaurantes {
             margin: 0 !important;
-            padding: 20px 10px !important; /* 🔥 clave */
+            padding: 20px 10px !important; /*  clave */
         }
 
         .grid-restaurantes {

@@ -19,7 +19,7 @@ function inicializarMenu() {
     const sidebar = document.querySelector(".sidebar-lateral");
     const overlay = document.getElementById("overlay");
 
-    // 🔥 SOLO comprobamos lo importante
+    //  SOLO comprobamos lo importante
     if (!button || !sidebar) return;
 
     button.onclick = () => {
@@ -30,7 +30,7 @@ function inicializarMenu() {
         }
     };
 
-    // 🔥 overlay es opcional
+    //  overlay es opcional
     if (overlay) {
         overlay.onclick = () => {
             sidebar.classList.remove("active");

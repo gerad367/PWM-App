@@ -118,7 +118,7 @@ body {
 }
 
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     .barra-gris-superior {
         padding: 0 16px;
     }
@@ -131,10 +131,6 @@ body {
         display: flex;  /* visible en móvil */
         align-items: center;
     }
-}
-
-#menu-toggle {
-    display: none;
 }
 
 @media (max-width: 768px) {
