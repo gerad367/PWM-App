@@ -1,18 +1,23 @@
-import {Component, Input} from '@angular/core';
-import { RouterLink } from '@angular/router'; // Necesario para que funcione el enlace
+import { Component, Input, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FavoritesService } from '../../services/favorites';
 
 @Component({
   selector: 'app-restaurant-card',
+  standalone: true,
   imports: [RouterLink],
   templateUrl: './restaurant-card.html',
   styleUrl: './restaurant-card.css',
 })
 export class RestaurantCard {
-  @Input() restaurant: any = {
-    id: 1,
-    nombre: 'Restaurante de Prueba',
-    imagen: '/assets/images/restaurants_pictures/goiko.png',
-    tipo: 'Hamburguesería',
-    valoracion: 4.5
-  };
+  @Input() restaurant: any;
+
+  // Inyectamos el servicio de favoritos
+  favService = inject(FavoritesService);
+
+  toggleFav(event: Event) {
+    event.preventDefault(); // Evitamos que al dar al corazón nos lleve a la página del restaurante
+    event.stopPropagation();
+    this.favService.toggleFavorite(this.restaurant.id);
+  }
 }

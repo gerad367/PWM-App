@@ -89,3 +89,14 @@
   transform: translateY(-5px);
   box-shadow: var(--shadow-card);
 }
+
+
+.btn-favorito.active {
+  background-color: var(--color-primary-pale);
+  transform: scale(1.2);
+}
+
+.btn-favorito.active img {
+  filter: invert(41%) sepia(85%) saturate(3441%) hue-rotate(338deg) brightness(98%) contrast(93%);
+  /* Ese filtro vuelve el icono naranja/rojo, o simplemente cambia el icono por uno relleno */
+}

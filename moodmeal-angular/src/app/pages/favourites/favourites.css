@@ -3,22 +3,34 @@
 /* ============================= */
 
 .zona-superior-favoritos {
-  padding-top: 40px;
-  width: 100%;
+  padding: 40px 60px 20px; /* Ajustamos el padding para que respire */
+  width: 100%;             /* Ocupa todo el ancho del main */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 40px;
 }
 
 /* Quitamos margen viejo del título */
 #title {
-  margin: 0 0 0 50px;
-  font-size: 60px;
+  margin: 0 ;
+  font-size: 48px;
   font-family: var(--font-title), sans-serif;
   font-weight: 800;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   color: var(--color-text-dark);
+}
+
+.grid-restaurantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  gap: 40px;
+  padding: 40px;
+  justify-content: center; /* ESTO es lo que centra las tarjetas */
+}
+
+app-restaurant-card {
+  display: block;
+  width: 320px;
 }
 
 /* Acciones derecha */
@@ -31,16 +43,37 @@
 
 /* Select ordenar */
 .select-ordenar {
-  padding: 8px 12px;
+  padding: 8px 35px 8px 14px; /* Más espacio a la derecha para la flecha */
+  background-color: #111;
+  color: white;
+  border: none;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  background: white;
   cursor: pointer;
+  font-family: var(--font-body), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   transition: 0.2s;
+
+  /* Quitar la flecha por defecto del navegador */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Añadir flecha personalizada en blanco */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
 }
 
 .select-ordenar:hover {
-  border-color: #999;
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+.select-ordenar option {
+  background-color: #111;
+  color: white;
 }
 
 /* Botón vaciar mejorado */
@@ -79,15 +112,20 @@
     font-size: 36px;
   }
 
-  .acciones-favoritos {
-    margin-right: 0;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .btn-vaciar {
-    border-radius: var(--radius-btn);
-    background: var(--color-text-dark);
-  }
 }
+
+.acciones-favoritos {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.select-orden {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  background: white;
+  cursor: pointer;
+}
+
 

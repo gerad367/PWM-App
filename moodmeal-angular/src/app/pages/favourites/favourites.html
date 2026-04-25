@@ -1,20 +1,25 @@
 <div class="zona-superior-favoritos">
-  <h1 id="title">Tus lugares favoritos</h1>
+  <h1 id="title">Mis Favoritos</h1>
 
   <div class="acciones-favoritos">
-    <select class="select-ordenar">
-      <option>Ordenar por fecha</option>
-      <option>Ordenar A-Z</option>
-      <option>Ordenar Z-A</option>
+    <select (change)="cambiarOrden($event)" class="select-orden">
+      <option value="fecha">Añadidos recientemente</option>
+      <option value="asc">Nombre (A-Z)</option>
+      <option value="desc">Nombre (Z-A)</option>
     </select>
 
-    <button class="btn-vaciar">Vaciar favoritos</button>
+    <button (click)="vaciarFavoritos()" class="btn-vaciar">
+      Vaciar lista
+    </button>
   </div>
 </div>
 
-<div id="cards_content-template">
-  <section class="contenedor-recomendaciones-restaurantes">
-    <h2></h2>
-    <div class="grid-restaurantes"></div>
-  </section>
+<div class="grid-restaurantes">
+  @for (res of misFavoritosOrdenados(); track res.id) {
+    <app-restaurant-card [restaurant]="res"></app-restaurant-card>
+  } @empty {
+    <div class="vacio">
+      <p>No tienes favoritos guardados. 💔</p>
+    </div>
+  }
 </div>

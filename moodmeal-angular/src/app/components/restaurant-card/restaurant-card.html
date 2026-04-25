@@ -3,7 +3,7 @@
 
     <img [src]="restaurant.imagen" class="foto-restaurante" [alt]="restaurant.nombre">
 
-    <button class="btn-favorito">
+    <button class="btn-favorito" (click)="toggleFav($event)" [class.active]="favService.isFavorite(restaurant.id)">
       <img src="/assets/images/favorito2.svg" alt="like">
     </button>
 
