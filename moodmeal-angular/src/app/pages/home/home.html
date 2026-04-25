@@ -4,8 +4,10 @@
 </div>
 
 <div class="Buscador">
-  <input type="text" placeholder="Busca restaurantes, cocinas...">
-  <button>
+  <input
+    type="text"
+    placeholder="Busca restaurantes, cocinas..."
+    (input)="onSearch($event)"> <button>
     <img src="/assets/images/icono3_search.svg" alt="Buscador">
   </button>
 </div>
@@ -38,10 +40,12 @@
   <h2>Recomendados para ti</h2>
 
   <div class="grid-restaurantes">
-    @for (res of restaurantes(); track res.id) {
+    @for (res of restaurantesFiltrados(); track res.id) {
       <app-restaurant-card [restaurant]="res"></app-restaurant-card>
-    }@empty {
-      <p>Cargando restaurantes o lista vacía...</p>
+    } @empty {
+      <div class="no-results">
+        <p>No hemos encontrado ningún restaurante que coincida con "{{ textoBusqueda() }}" 😢</p>
+      </div>
     }
   </div>
 
