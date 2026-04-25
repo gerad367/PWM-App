@@ -1,0 +1,33 @@
+<div class="contenedor-login">
+  <section class="lado-izquierdo">
+    <div class="overlay"></div>
+    <div class="contenido-izquierda">
+      <h1>MOODMEAL</h1>
+      <p>Encuentra restaurantes según cómo te sientas hoy</p>
+    </div>
+  </section>
+
+  <section class="lado-derecho">
+    <div class="form-container">
+      <div class="icono-usuario">
+        <img src="/assets/images/icono_usuario.png" alt="Usuario">
+      </div>
+      <h2>Iniciar sesión</h2>
+      <form id="login-form" (submit)="onSubmit($event)">
+        <div class="grupo-input">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Introduce tu usuario" required>
+        </div>
+        <div class="grupo-input">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required>
+        </div>
+        <button type="submit" class="boton-login">Login</button>
+      </form>
+      <div class="links-extra">
+        <a routerLink="/registro">¿No tienes cuenta? Regístrate</a>
+        <a routerLink="/recuperar">¿Olvidaste tu contraseña?</a>
+      </div>
+    </div>
+  </section>
+</div>

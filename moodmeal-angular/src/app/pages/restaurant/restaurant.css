@@ -1,0 +1,200 @@
+/*body {*/
+/*    display: flex;*/
+/*    height: 80vh;*/
+/*    align-content: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+#restaurant-main {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  margin:0;
+  padding: 20px;
+}
+
+#portada {
+  margin-right: 20px;
+
+  img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: 15px;
+  }
+}
+
+#extra {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+
+  #rating {
+    flex-grow: 2;
+  }
+
+  img {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 0px; /* Se ponia feo si no pongo esto*/
+  }
+}
+
+#detalles {
+  position: relative;
+  width: fit-content;
+  overflow-x: hidden;
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
+#restaurant-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  /*margin-top: 44px;*/
+  padding: 15px;
+  max-width: 100%;
+  gap:20px;
+  scroll-behavior: smooth;    /* Deslizamiento suave */
+}
+.menu-element{
+  flex: 0 0 auto; /* evita que los platos se aplasten si hay muchos */
+  width: 200px;
+  background: var(--color-bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.menu-element img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;  /* para que la imagen no se deforme*/
+  object-position: center;
+}
+
+.menu-element p {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+#horario {
+  margin-top: 120px;
+  justify-content: center;
+
+  table {
+    margin: auto;
+    padding: 5px;
+
+    td{
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+/* Botones de categorías */
+.menu-tabs{
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  overflow-x: auto;       /* Por si hay muchas categorías */
+}
+
+.tab-btn{
+  padding: 8px 18px;
+  border: 1.5px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Cuando la pestaña está activa o pasamos el ratón */
+.tab-btn:hover, .tab-btn.activo {
+  background: var(--color-primary);
+  color: white;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99;
+}
+
+#overlay.active {
+  display: block;
+}
+
+@media (max-width: 1024px){
+  #detalles {
+    width: 100%;   /* ← ocupa todo el ancho */
+  }
+
+  #restaurant-main {
+    margin: 72px 0 72px 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 768px){
+  #restaurant-main {
+    margin: 64px 0 64px 0;
+    padding: 16px;
+  }
+
+  #portada img {
+    height: 220px;
+  }
+
+  #horario {
+    display: block;      /*  convierte la tabla en bloque */
+    overflow-x: auto;    /*  scroll en la propia tabla */
+    margin-top: 40px;
+  }
+
+  #horario table {
+    min-width: 500px;  /* scroll horizontal */
+  }
+  #extra {
+    margin-top: 12px;
+    padding: 8px 0;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  #extra img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #menu-toggle {
+    display: flex !important;
+  }
+}

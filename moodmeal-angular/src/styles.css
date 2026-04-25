@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+/* Para importar tipografias de internet */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans&display=swap');
+
+/* Reset básico global */
+*, *::before, *::after {
+
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dado que el header es el unico CSS que se carga en todas las paginas, aplicamos variables globales a todas: */
+/* El root está por encima del html. Esto esta disponible para todos los css */
+
+:root {
+  /* nota: -- son las variables en css (ponemos cualquier nombre)*/
+  /* Colores */
+  --color-primary: #E8541A;
+  --color-primary-hover: #FF7040;
+  --color-primary-pale:  #FFE8DA;
+  --color-bg:            #FFF7F2;
+  --color-bg-card:       #FFFFFF;
+  --color-bg-section:    #F5EDE8;
+  --color-text-dark:     #1E0E05;
+  --color-text-body:     #4A2E1E;
+  --color-text-muted:    #9A7060;
+  --color-border:        #E5D4CA;
+  --color-danger:        #D9534F;
+
+  /* Tipografía */
+  --font-title: 'Poppins', sans-serif;
+  --font-body:  'DM Sans', sans-serif;
+
+  /* Radios */
+  --radius-card: 16px;
+  --radius-btn:  18px;
+  --radius-sm:   8px;
+
+  /* Sombras */
+  --shadow-card: 0 2px 12px rgba(60, 20, 5, 0.08);
+  --shadow-hover: 0 6px 24px rgba(60, 20, 5, 0.14);
+}
+
+body {
+  /* El var es para usar una variable que hemos definido */
+  font-family: var(--font-body), serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* COLORES POR MOOD
+   Sobreescriben las variables del :root
+   solo en la página de mood activa */
+
+.mood-romantico {
+  --color-primary:      #D4547A;
+  --color-primary-hover:#E87096;
+  --color-primary-pale: #FFE0EA;
+  --color-bg:           #FFF5F8;
+  --color-bg-section:   #FAE8EE;
+  --color-border:       #F0C8D8;
+}
+
+.mood-feliz {
+  --color-primary:      #E8A020;
+  --color-primary-hover:#F5B840;
+  --color-primary-pale: #FFF0CC;
+  --color-bg:           #FFFCF0;
+  --color-bg-section:   #FFF5D6;
+  --color-border:       #F0DFA0;
+}
+
+.mood-energetico {
+  --color-primary:      #2EAA6A;
+  --color-primary-hover:#3EC87E;
+  --color-primary-pale: #D4F5E4;
+  --color-bg:           #F4FFF9;
+  --color-bg-section:   #E0F8EC;
+  --color-border:       #A8E8C4;
+}
+
+.mood-triste {
+  --color-primary:      #4A7AB5;
+  --color-primary-hover:#6A9AD5;
+  --color-primary-pale: #DCE8F8;
+  --color-bg:           #F4F8FF;
+  --color-bg-section:   #E4EEF8;
+  --color-border:       #B8D0EC;
+}
+
+/* EL ESPACIO PARA LA BARRA LATERAL (AHORA GLOBAL) */
+main {
+  margin-left: 240px;
+  padding-top: 64px;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 240px);
+  overflow: hidden;
+}
+
+#overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1024px) {
+  main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}

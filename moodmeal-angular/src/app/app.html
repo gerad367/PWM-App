@@ -1,0 +1,11 @@
+<app-header (menuClicked)="menuSidebar.toggle()"></app-header>
+
+<div id="overlay" [class.active]="menuSidebar.isOpen" (click)="menuSidebar.toggle()"></div>
+
+<app-sidebar #menuSidebar></app-sidebar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

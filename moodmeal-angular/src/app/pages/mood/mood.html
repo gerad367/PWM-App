@@ -1,0 +1,18 @@
+<div [class]="'logo_' + currentMood()" id="mood-title">
+
+  <img [src]="moodData().imagen" alt="emoji que representa emocion" id="mood-image">
+
+  <div id="mood-texts">
+    <h3>{{ moodData().titulo1 }}</h3>
+    <h2>{{ moodData().titulo2 }}</h2>
+    <h3>{{ moodData().titulo3 }}</h3>
+  </div>
+</div>
+
+<div id="cards_content-template">
+  <section class="recomendaciones-segun-mood">
+    @for (res of restaurantesFiltrados(); track res.id) {
+      <app-restaurant-card [restaurant]="res"></app-restaurant-card>
+    }
+  </section>
+</div>

@@ -1,0 +1,50 @@
+@if (restaurant()) {
+  <div id="restaurant-main">
+    <section id="portada">
+      <h1>{{ restaurant().nombre }}</h1>
+      <img [src]="restaurant().imagen" [alt]="restaurant().nombre">
+    </section>
+
+    <section id="detalles">
+      <h2>Menú</h2>
+
+      <div id="menu-tabs" class="menu-tabs">
+        @for (seccion of secciones(); track seccion) {
+          <button class="tab-btn"
+                  [class.activo]="seccionActiva() === seccion"
+                  (click)="cambiarSeccion(seccion)">
+            {{ seccion }}
+          </button>
+        }
+      </div>
+
+      <div id="restaurant-menu">
+        @for (plato of platosFiltrados(); track plato.nombre_plato) {
+          <article class="menu-element">
+            <img [src]="plato.foto || '/assets/images/menu-item-placeholder.png'"
+                 [alt]="plato.nombre_plato">
+            <p>{{ plato.nombre_plato }}</p>
+          </article>
+        }
+      </div>
+
+      <section id="horario">
+        <h2>Horario</h2>
+        <table>
+          <tr>
+            @for (dia of diasSemana; track dia) {
+              <th>{{ dia }}</th>
+            }
+          </tr>
+          <tr>
+            @for (dia of diasSemana; track dia) {
+              <td>{{ restaurant().horario[dia] }}</td>
+            }
+          </tr>
+        </table>
+      </section>
+    </section>
+  </div>
+} @else {
+  <p>Cargando información del restaurante...</p>
+}
