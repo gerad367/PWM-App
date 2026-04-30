@@ -5,7 +5,7 @@
     <a [routerLink]="['/settings']" fragment="preferencias" class="opcion">Preferencias</a>
     <a [routerLink]="['/settings']" fragment="notificaciones" class="opcion">Notificaciones</a>
     <a [routerLink]="['/settings']" fragment="privacidad" class="opcion">Privacidad</a>
-    <a href="#" class="opcion eliminar" id="delete-account">Cerrar sesión</a>
+    <a (click)="logout($event)" class="opcion eliminar" style="cursor: pointer;">Cerrar sesión</a>
   </div>
 
   <div class="contenido-derecha">
