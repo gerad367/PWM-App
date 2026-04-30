@@ -1,20 +1,35 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Injectable, inject } from '@angular/core';
+import { Firestore, collection, getDocs, doc, getDoc } from '@angular/fire/firestore';
+import { Observable, from, map } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
-  private jsonUrl = '/assets/data/data.json';
+  private firestore = inject(Firestore);
 
-  constructor(private http: HttpClient) {}
-
+  // Obtenemos todos los restaurantes desde Firestore
   getRestaurantes(): Observable<any[]> {
-    return this.http.get<any>(this.jsonUrl).pipe(map(data => data.restaurantes));
+    const restaurantesRef = collection(this.firestore, 'restaurantes');
+
+    return from(getDocs(restaurantesRef)).pipe(
+      map(snapshot => {
+        return snapshot.docs.map(doc => {
+          return { id: doc.id, ...doc.data() };
+        });
+      })
+    );
   }
 
+  // Obtenemos un restaurante individual
   getRestauranteById(id: string): Observable<any | undefined> {
-    return this.http.get<any>(this.jsonUrl).pipe(
-      map(data => data.restaurantes.find((r: any) => r.id.toString() === id))
+    const restauranteDocRef = doc(this.firestore, `restaurantes/${id}`);
+
+    return from(getDoc(restauranteDocRef)).pipe(
+      map(snapshot => {
+        if (snapshot.exists()) {
+          return { id: snapshot.id, ...snapshot.data() };
+        }
+        return undefined;
+      })
     );
   }
 }
