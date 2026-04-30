@@ -1,6 +1,6 @@
 import {Component, Output, EventEmitter, inject} from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {AuthService} from '../../services/auth.services';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({

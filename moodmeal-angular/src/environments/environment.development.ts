@@ -6,7 +6,7 @@ export const environment = {
     projectId: "moodmeal-app",
     storageBucket: "moodmeal-app.firebasestorage.app",
     messagingSenderId: "803980257062",
-    appId: "1:803980257062:web:8c7bc2d2df216b473043e7",
-    measurementId: "G-12KTVPYRCZ"
+    appId: "1:803980257062:web:508c17f2e06753e33043e7",
+    measurementId: "G-G718BBXG78"
   }
 };

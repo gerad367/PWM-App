@@ -1,11 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../../services/auth.services';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './settings.html',
   styleUrl: './settings.css'
 })
@@ -13,13 +13,17 @@ export class Settings {
   private authService = inject(AuthService);
   private router = inject(Router);
 
+  // 1. Creamos una señal para saber qué pestaña está activa (por defecto 'preferencias')
+  seccionActiva = signal<string>('preferencias');
+
+  // 2. Función para cambiar de pestaña al hacer clic
+  cambiarSeccion(seccion: string) {
+    this.seccionActiva.set(seccion);
+  }
+
   logout(event: Event) {
-    event.preventDefault(); // Evita cualquier comportamiento por defecto del enlace
-
-    // 1. Llamamos al servicio para limpiar la cookie y el Signal
+    event.preventDefault();
     this.authService.logout();
-
-    // 2. Redirigimos al Login
     this.router.navigate(['/login']);
   }
 }

@@ -78,24 +78,13 @@
   padding: 32px 28px;
 }
 
-
 /* ---- Secciones ---- */
-#perfil { display: block; }
-
-.contenedor-settings:has(#preferencias:target) #perfil,
-.contenedor-settings:has(#notificaciones:target) #perfil,
-.contenedor-settings:has(#privacidad:target) #perfil {
-  display: none;
+.seccion {
+  display: block;
 }
 
-.seccion { display: none; }
-.seccion:target { display: block; }
-
 /* ---- Botón activo ---- */
-.contenedor-settings:has(#perfil:target)         .menu-ajustes a[href="#perfil"],
-.contenedor-settings:has(#preferencias:target)   .menu-ajustes a[href="#preferencias"],
-.contenedor-settings:has(#notificaciones:target) .menu-ajustes a[href="#notificaciones"],
-.contenedor-settings:has(#privacidad:target)     .menu-ajustes a[href="#privacidad"] {
+.opcion.activo {
   background-color: var(--color-primary-pale);
   color: var(--color-primary);
   border-color: var(--color-primary);

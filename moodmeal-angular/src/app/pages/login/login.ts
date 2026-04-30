@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importante
-import { AuthService } from '../../services/auth.services';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +30,7 @@ export class Login {
         this.router.navigate(['/']);
       } catch (error) {
         alert("Error al entrar: Usuario o contraseña incorrectos");
+        console.error(error);
       }
     }
   }

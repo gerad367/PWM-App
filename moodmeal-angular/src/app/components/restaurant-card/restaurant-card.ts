@@ -1,7 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import { FavoritesService } from '../../services/favorites';
-import {AuthService} from '../../services/auth.services';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-restaurant-card',

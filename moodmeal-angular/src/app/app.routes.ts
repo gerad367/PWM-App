@@ -19,7 +19,7 @@ export const routes: Routes = [
   { path: 'mood', component: Mood },
   { path: 'restaurant', component: Restaurant },
 
-  { path: '**', redirectTo: '' },
+  { path: 'register', component: Register },
 
-  { path: 'register', component: Register }
+  { path: '**', redirectTo: '' }
 ];
