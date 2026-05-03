@@ -1,52 +1,37 @@
-import { Component } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importante
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [RouterLink, ReactiveFormsModule], // Añade ReactiveFormsModule aquí
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
-  // Inyectamos el Router de Angular para poder cambiar de página
-  constructor(private router: Router) {}
+  private fb = inject(FormBuilder); // "El arquitecto de formularios"
+  private authService = inject(AuthService);
+  private router = inject(Router);
 
-  setCookie(name: string, value: string, ttl: number, path = "/") {
-    const date = new Date();
-    date.setTime(date.getTime() + (ttl * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + date.toUTCString();
-    document.cookie = `${name}=${value}; ${expires}; path=${path}`;
-  }
+  // Definimos el formulario con sus reglas
+  loginForm: FormGroup = this.fb.group({
+    username: ['', [Validators.required, Validators.minLength(3)]],
+    password: ['', [Validators.required, Validators.minLength(4)]]
+  });
 
-  // La función que se ejecuta al darle al botón de Login
-  onSubmit(event: Event) {
-    event.preventDefault(); // Evita que la página recargue
-
-    // Cogemos los valores de los inputs
-    const usernameField = document.getElementById('username') as HTMLInputElement;
-    const passwordField = document.getElementById('password') as HTMLInputElement;
-
-    fetch('/assets/database/users.json')
-      .then(response => response.json())
-      .then(data => {
-        let user = usernameField.value;
-        let passwd = passwordField.value;
-
-        // Buscamos si existe el usuario
-        let match = data.users.find((e: any) => e.name === user);
-
-        if (match && match.passwd === passwd) {
-          // Si coincide, guardamos cookies y vamos al Home usando Angular Router
-          this.setCookie("userLogged", "true", 30);
-          this.setCookie("username", user, 30);
-          this.setCookie("email", match.mail, 30);
-
-          this.router.navigate(['/']); // Redirección instantánea al Home
-        } else {
-          // Si falla, vaciamos la contraseña
-          passwordField.value = '';
-          alert("Usuario o contraseña incorrectos"); // Añadido
-        }
-      });
+  async onSubmit() {
+    if (this.loginForm.valid) {
+      const {username, password} = this.loginForm.value; // 'username' será el email
+      try {
+        // Usamos el login de Firebase
+        await this.authService.login(username, password);
+        this.router.navigate(['/']);
+      } catch (error) {
+        alert("Error al entrar: Usuario o contraseña incorrectos");
+        console.error(error);
+      }
+    }
   }
 }

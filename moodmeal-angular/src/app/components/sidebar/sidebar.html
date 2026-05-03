@@ -1,4 +1,3 @@
-
 <nav class="sidebar-lateral" [class.active]="isOpen">
   <ul class="menu-navegacion">
     <li>
@@ -7,17 +6,14 @@
         <span>Inicio</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/favourites" (click)="this.isOpen=false">
-        <img src="/assets/images/favorito2.svg" alt="Favoritos">
-        <span>Favoritos</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/settings" (click)="this.isOpen=false">
-        <img src="/assets/images/settings.png" alt="Ajustes">
-        <span>Ajustes</span>
-      </a>
-    </li>
+
+    @if (authService.isLoggedIn()) {
+      <li>
+        <a routerLink="/favourites" (click)="toggle()">
+          <img src="/assets/images/favorito2.svg" alt="Favoritos">
+          <span>Favoritos</span>
+        </a>
+      </li>
+    }
   </ul>
 </nav>

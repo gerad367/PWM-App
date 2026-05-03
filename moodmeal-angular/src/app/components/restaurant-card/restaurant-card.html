@@ -3,7 +3,10 @@
 
     <img [src]="restaurant.imagen" class="foto-restaurante" [alt]="restaurant.nombre">
 
-    <button class="btn-favorito" (click)="toggleFav($event)" [class.active]="favService.isFavorite(restaurant.id)">
+    <button class="btn-favorito"
+            (click)="toggleFav($event)"
+            [class.active]="authService.isLoggedIn() && favService.isFavorite(restaurant.id)"
+            [style.opacity]="authService.isLoggedIn() ? '1' : '0.7'">
       <img src="/assets/images/favorito2.svg" alt="like">
     </button>
 

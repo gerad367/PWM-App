@@ -76,7 +76,7 @@
         {
           "seccion": "Bebidas",
           "nombre_plato": "Goiko Ice Tea",
-          "foto": "../assets/images/menu_restaurants/Goiko/drinks/iceTea.png",
+          "foto": "../assets/images/menu_restaurants/Goiko/Drinks/iceTea.png",
           "ingredientes": [
             "té",
             "limón"

@@ -1,5 +1,6 @@
-import {Component, Output, EventEmitter} from '@angular/core';
+import {Component, Output, EventEmitter, inject} from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({
@@ -12,6 +13,9 @@ import {RouterLink} from '@angular/router';
 })
 export class Header {
   @Output() menuClicked = new EventEmitter<void>();
+
+  // Inyectamos el servicio para saber el estado de la sesión
+  public authService = inject(AuthService);
 
   onMenuClick() {
     this.menuClicked.emit();

@@ -13,32 +13,26 @@ import { DataService } from '../../services/data';
 export class Home implements OnInit {
   private dataService = inject(DataService);
 
-  // Cargamos todos los restaurantes aquí
   todosLosRestaurantes = signal<any[]>([]);
-
-  // Aquí guardamos lo que el usuario escribe
   textoBusqueda = signal<string>('');
 
   restaurantesFiltrados = computed(() => {
     const busqueda = this.textoBusqueda().toLowerCase().trim();
-
-    // Si no hay búsqueda, devolvemos todos
     if (!busqueda) return this.todosLosRestaurantes();
 
-    // Filtramos por nombre o por tipo de cocina (según JSON)
     return this.todosLosRestaurantes().filter(res =>
-      res.nombre.toLowerCase().includes(busqueda) ||
-      res.tipo.toLowerCase().includes(busqueda)
+      res?.nombre?.toLowerCase().includes(busqueda) ||
+      res?.tipo?.toLowerCase().includes(busqueda)
     );
   });
 
   ngOnInit() {
+    // Llamada limpia a Firebase
     this.dataService.getRestaurantes().subscribe(data => {
       this.todosLosRestaurantes.set(data);
     });
   }
 
-  // Función para actualizar la señal desde el HTML
   onSearch(event: Event) {
     const input = event.target as HTMLInputElement;
     this.textoBusqueda.set(input.value);

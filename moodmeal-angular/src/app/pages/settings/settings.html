@@ -1,91 +1,92 @@
 <div class="contenedor-settings">
   <div class="menu-ajustes">
     <h2>Ajustes de la cuenta</h2>
-    <a [routerLink]="['/settings']" fragment="perfil" class="opcion">Editar perfil</a>
-    <a [routerLink]="['/settings']" fragment="preferencias" class="opcion">Preferencias</a>
-    <a [routerLink]="['/settings']" fragment="notificaciones" class="opcion">Notificaciones</a>
-    <a [routerLink]="['/settings']" fragment="privacidad" class="opcion">Privacidad</a>
-    <a href="#" class="opcion eliminar" id="delete-account">Cerrar sesión</a>
+    <!-- Cambiamos los enlaces por clics que avisan a nuestra variable -->
+    <a (click)="cambiarSeccion('perfil')" class="opcion" [class.activo]="seccionActiva() === 'perfil'" style="cursor: pointer;">Editar perfil</a>
+
+    <a (click)="cambiarSeccion('preferencias')" class="opcion" [class.activo]="seccionActiva() === 'preferencias'" style="cursor: pointer;">Preferencias</a>
+
+    <a (click)="cambiarSeccion('notificaciones')" class="opcion" [class.activo]="seccionActiva() === 'notificaciones'" style="cursor: pointer;">Notificaciones</a>
+
+    <a (click)="cambiarSeccion('privacidad')" class="opcion" [class.activo]="seccionActiva() === 'privacidad'" style="cursor: pointer;">Privacidad</a>
+
+    <a (click)="logout($event)" class="opcion eliminar" style="cursor: pointer;">Cerrar sesión</a>
   </div>
 
   <div class="contenido-derecha">
 
-    <div id="perfil" class="seccion">
-      <h2>Editar perfil</h2>
+    <!-- @if hace que esta caja solo exista si la sección activa es 'perfil' -->
+    @if (seccionActiva() === 'perfil') {
+      <div id="perfil" class="seccion">
+        <h2>Editar perfil</h2>
+        <form [formGroup]="profileForm" (ngSubmit)="onSaveProfile()" class="form-perfil">
+          <label>Nombre</label>
+          <input type="text" formControlName="nombre" placeholder="Introduce tu nuevo nombre">
+          @if (profileForm.get('nombre')?.invalid && profileForm.get('nombre')?.touched) {
+            <small class="error">El nombre debe tener al menos 3 caracteres</small>
+          }
 
-      <form class="form-perfil">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="Introduce tu nuevo email">
+          @if (profileForm.get('email')?.invalid && profileForm.get('email')?.touched) {
+            <small class="error">Introduce un email válido</small>
+          }
 
-        <label>Nombre</label>
-        <input type="text" placeholder="Introduce tu nuevo nombre">
+          <label>Nueva contraseña (dejar en blanco para no cambiar)</label>
+          <input type="password" formControlName="password" placeholder="Mínimo 6 caracteres">
 
-        <label>Email</label>
-        <input type="email" placeholder="Introduce tu nuevo email">
+          <button type="submit" [disabled]="profileForm.invalid" class="btn-guardar">Guardar cambios</button>
+        </form>
+      </div>
+    }
 
-        <label>Nueva contraseña</label>
-        <input type="password" placeholder="Introduce nueva contraseña">
+    <!-- @if hace que esta caja solo exista si la sección activa es 'preferencias' -->
+    @if (seccionActiva() === 'preferencias') {
+      <div id="preferencias" class="seccion">
+        <h2>Preferencias</h2>
+        <form class="form-perfil">
+          <label>Idioma</label>
+          <select>
+            <option>Español</option>
+            <option>Inglés</option>
+          </select>
+          <label>Modo de la aplicación</label>
+          <select>
+            <option>Modo claro</option>
+            <option>Modo oscuro</option>
+          </select>
+          <button type="button" class="btn-guardar">Guardar cambios</button>
+        </form>
+      </div>
+    }
 
-        <button type="submit" class="btn-guardar">Guardar cambios</button>
+    @if (seccionActiva() === 'notificaciones') {
+      <div id="notificaciones" class="seccion">
+        <h2>Notificaciones</h2>
+        <form class="form-perfil">
+          <label><input type="checkbox"> Recibir notificaciones por email</label>
+          <label><input type="checkbox"> Recibir notificaciones push</label>
+          <label><input type="checkbox"> Recordatorios de pedidos</label>
+          <button type="button" class="btn-guardar">Guardar cambios</button>
+        </form>
+      </div>
+    }
 
-      </form>
-    </div>
-
-    <div id="preferencias" class="seccion">
-      <h2>Preferencias</h2>
-      <form class="form-perfil">
-        <label>Idioma</label>
-        <select>
-          <option>Español</option>
-          <option>Inglés</option>
-        </select>
-        <label>Modo de la aplicación</label>
-        <select>
-          <option>Modo claro</option>
-          <option>Modo oscuro</option>
-        </select>
-        <button type="submit" class="btn-guardar">Guardar cambios</button>
-      </form>
-    </div>
-
-    <div id="notificaciones" class="seccion">
-      <h2>Notificaciones</h2>
-      <form class="form-perfil">
-        <label>
-          <input type="checkbox">
-          Recibir notificaciones por email
-        </label>
-        <label>
-          <input type="checkbox">
-          Recibir notificaciones push
-        </label>
-        <label>
-          <input type="checkbox">
-          Recordatorios de pedidos
-        </label>
-        <button type="submit" class="btn-guardar">Guardar cambios</button>
-
-      </form>
-    </div>
-
-    <div id="privacidad" class="seccion">
-      <h2>Privacidad</h2>
-      <form class="form-perfil">
-        <label>Cuenta</label>
-        <select>
-          <option>Pública</option>
-          <option>Privada</option>
-        </select>
-        <label>
-          <input type="checkbox">
-          Mostrar mi perfil en búsquedas
-        </label>
-        <label>
-          <input type="checkbox">
-          Permitir mensajes de otros usuarios
-        </label>
-        <button type="submit" class="btn-guardar">Guardar cambios</button>
-      </form>
-    </div>
+    @if (seccionActiva() === 'privacidad') {
+      <div id="privacidad" class="seccion">
+        <h2>Privacidad</h2>
+        <form class="form-perfil">
+          <label>Cuenta</label>
+          <select>
+            <option>Pública</option>
+            <option>Privada</option>
+          </select>
+          <label><input type="checkbox"> Mostrar mi perfil en búsquedas</label>
+          <label><input type="checkbox"> Permitir mensajes de otros usuarios</label>
+          <button type="button" class="btn-guardar">Guardar cambios</button>
+        </form>
+      </div>
+    }
 
   </div>
-
 </div>
