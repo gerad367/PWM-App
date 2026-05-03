@@ -11,5 +11,10 @@ import {Footer} from './components/footer/footer';
   styleUrl: './app.css'
 })
 export class App {
+  isSidebarOpen = false;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
   protected readonly title = signal('moodmeal-angular');
 }
