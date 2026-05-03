@@ -38,7 +38,7 @@
           </tr>
           <tr>
             @for (dia of diasSemana; track dia) {
-              <td>{{ restaurant().horario[dia] }}</td>
+              <td>{{ restaurant().horario[dia.toLowerCase()] }}</td>
             }
           </tr>
         </table>
